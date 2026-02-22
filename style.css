@@ -1,93 +1,299 @@
+/* ===================================================== */
+/* GLOBAL RESET */
+/* ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-  margin: 0;
-  font-family: 'Helvetica Neue', sans-serif;
-  background: #000;
-  color: #fff;
-  scroll-behavior: smooth;
+    background-color: #000;
+    color: #fff;
+    font-family: "Hotel Oriental", serif;
+    letter-spacing: 1px;
+    line-height: 1.7;
+    overflow-x: hidden;
 }
 
-#loader {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
+/* ===================================================== */
+/* TYPOGRAPHY */
+/* ===================================================== */
+
+h1, h2, h3, h4 {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 4px;
 }
 
-.chaos-text {
-  font-size: 4rem;
-  letter-spacing: 10px;
-  animation: flicker 2s infinite;
+h1 {
+    font-size: 5rem;
 }
 
-@keyframes flicker {
-  0% { opacity: 1; }
-  50% { opacity: 0.3; }
-  100% { opacity: 1; }
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 50px;
-  position: fixed;
-  width: 100%;
-  background: rgba(0,0,0,0.7);
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-nav a {
-  margin-left: 20px;
-  color: white;
-  text-decoration: none;
-  transition: 0.3s;
+p {
+    max-width: 800px;
+    opacity: 0.85;
 }
 
-nav a:hover {
-  opacity: 0.6;
+/* ===================================================== */
+/* HEADER */
+/* ===================================================== */
+
+#main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 60px;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-.hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+#logo-container img {
+    height: 35px;
+    margin-right: 20px;
+    filter: brightness(0) invert(1);
 }
 
-.section {
-  padding: 120px 10%;
+#main-navigation ul {
+    display: flex;
+    list-style: none;
 }
 
-.dark {
-  background: #111;
+#main-navigation li {
+    margin-left: 30px;
 }
 
-.member-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+#main-navigation a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.8rem;
+    transition: 0.3s ease;
+    position: relative;
 }
 
-.member-card {
-  border: 1px solid white;
-  padding: 20px;
-  cursor: pointer;
-  transition: 0.3s;
+#main-navigation a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    bottom: -4px;
+    left: 0;
+    background: white;
+    transition: 0.3s ease;
 }
 
-.member-card:hover {
-  background: white;
-  color: black;
+#main-navigation a:hover::after {
+    width: 100%;
 }
+
+/* ===================================================== */
+/* HERO SECTION */
+/* ===================================================== */
+
+#hero {
+    height: 100vh;
+    background: linear-gradient(to bottom, #000 60%, #111);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#hero-content {
+    animation: fadeIn 2s ease forwards;
+}
+
+#hero h2 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    opacity: 0.7;
+}
+
+/* ===================================================== */
+/* SECTIONS */
+/* ===================================================== */
+
+section {
+    padding: 140px 10%;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+section:nth-child(even) {
+    background-color: #050505;
+}
+
+/* ===================================================== */
+/* MEMBER PROFILES */
+/* ===================================================== */
+
+.member-profile {
+    margin-bottom: 60px;
+    padding: 40px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.4s ease;
+}
+
+.member-profile:hover {
+    background-color: white;
+    color: black;
+    transform: translateY(-10px);
+}
+
+.member-profile:hover p,
+.member-profile:hover strong {
+    color: black;
+}
+
+/* ===================================================== */
+/* DISCOGRAPHY */
+/* ===================================================== */
 
 .album {
-  margin-bottom: 40px;
+    margin-bottom: 60px;
+    padding: 40px;
+    border-left: 2px solid white;
+    transition: 0.3s ease;
 }
 
-footer {
-  text-align: center;
-  padding: 40px;
+.album:hover {
+    background: rgba(255,255,255,0.05);
+}
+
+.album ul {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.album li {
+    margin-bottom: 8px;
+    opacity: 0.8;
+}
+
+/* ===================================================== */
+/* PRE-SAVE */
+/* ===================================================== */
+
+#presave form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+#presave label {
+    margin-bottom: 8px;
+    font-size: 0.8rem;
+}
+
+#presave input,
+#presave select {
+    padding: 12px;
+    margin-bottom: 20px;
+    background: black;
+    border: 1px solid white;
+    color: white;
+    font-family: inherit;
+}
+
+#presave button {
+    padding: 15px;
+    background: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+#presave button:hover {
+    background: black;
+    color: white;
+    border: 1px solid white;
+}
+
+/* ===================================================== */
+/* FOOTER */
+/* ===================================================== */
+
+#main-footer {
+    padding: 80px 10%;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#main-footer ul {
+    list-style: none;
+}
+
+#main-footer a {
+    text-decoration: none;
+    color: white;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+#main-footer a:hover {
+    opacity: 1;
+}
+
+/* ===================================================== */
+/* ANIMATIONS */
+/* ===================================================== */
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===================================================== */
+/* RESPONSIVE */
+/* ===================================================== */
+
+@media (max-width: 900px) {
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    #main-header {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    #main-navigation ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    section {
+        padding: 100px 8%;
+    }
+
+    .member-profile,
+    .album {
+        padding: 25px;
+    }
 }
