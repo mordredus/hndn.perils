@@ -4,20 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HN-DN Official | Hundun</title>
-    <!-- Hotel Oriental Font -->
     <link href="https://fonts.cdnfonts.com/css/hotel-oriental" rel="stylesheet">
-    <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- SITE WRAPPER -->
     <div id="site-wrapper">
 
         <!-- HEADER -->
         <header id="main-header">
-            <div id="logo-container">
-                <img src="images/logo.png" alt="HN-DN Logo">
-            </div>
+            <div id="logo">HN-DN</div>
             <nav id="main-navigation">
                 <ul>
                     <li><a href="#hero">Home</a></li>
@@ -29,81 +24,52 @@
             </nav>
         </header>
 
-        <!-- HERO SECTION -->
+        <!-- HERO -->
         <section id="hero">
             <div id="hero-content">
                 <h1>HN-DN</h1>
                 <h2>Hundun | Existentialism in Sound</h2>
                 <p>Formed under APL LABELS in 2023. Members from Philippines, USA, Indonesia, South Korea, UK.</p>
-                <a href="#presave" class="hero-button">Pre-Save Now</a>
+                <button id="hero-presave">Pre-Save Now</button>
             </div>
         </section>
 
-        <!-- ABOUT / CONCEPT -->
+        <!-- ABOUT -->
         <section id="about">
-            <h2>What is HN-DN?</h2>
-            <p><strong>HN-DN</strong> (pronunciation: Hundun) is a five-member group formed under <strong>APL LABELS</strong> in 2023. The group consists of members from the Philippines, United States, Indonesia, South Korea, and the United Kingdom.</p>
-
-            <h2>Concept</h2>
-            <p>Their concept centers around <strong>Existentialism</strong>, exploring the human condition, chaos, and self-awareness through music.</p>
-
-            <h2>Meaning Behind the Name</h2>
-            <p>HN-DN comes from Hun Dun, the concept of primordial chaos in Chinese philosophy and mythology.</p>
+            <h2>About HN-DN</h2>
+            <p>HN-DN (Hundun) is a five-member group exploring existentialism and chaos in music. Their name comes from the concept of Hun Dun in Chinese mythology.</p>
         </section>
 
-        <!-- MEMBERS SECTION -->
+        <!-- MEMBERS -->
         <section id="members">
             <h2>Members</h2>
             <div class="members-grid">
-
-                <!-- MEMBER 1 -->
                 <div class="member-profile" id="ezra">
-                    <img src="images/ezra.png" alt="Ezra Milagrosa Diwa">
                     <h3>Ezra Milagrosa Diwa</h3>
                     <p>Leader & Producer • Filipino</p>
-                    <p class="bio">Ezra produces the group's music and leads their creative direction.</p>
                 </div>
-
-                <!-- MEMBER 2 -->
                 <div class="member-profile" id="sally">
-                    <img src="images/sally.png" alt="Sally Armitage">
                     <h3>Sally Armitage</h3>
                     <p>Vocalist & Lead Dancer • British</p>
-                    <p class="bio">Sally brings precision to vocals and stage presence.</p>
                 </div>
-
-                <!-- MEMBER 3 -->
                 <div class="member-profile" id="sariyah">
-                    <img src="images/sariyah.png" alt="Sariyah Lie">
                     <h3>Sariyah Lie</h3>
                     <p>Sub-Vocalist • Indonesian-Chinese</p>
-                    <p class="bio">Known for her majestic vocal range and calm stage aura.</p>
                 </div>
-
-                <!-- MEMBER 4 -->
                 <div class="member-profile" id="slyvan">
-                    <img src="images/slyvan.png" alt="Slyvan Montgomery">
                     <h3>Slyvan Montgomery</h3>
                     <p>Rapper & Dancer • American</p>
-                    <p class="bio">Slyvan excels in dance battles and freestyle rap performances.</p>
                 </div>
-
-                <!-- MEMBER 5 -->
                 <div class="member-profile" id="hyunseok">
-                    <img src="images/hyunseok.png" alt="Lee Hyun-Seok">
                     <h3>Lee Hyun-Seok</h3>
                     <p>Main Dancer & Rapper • Korean-American</p>
-                    <p class="bio">Hyun-Seok dominates choreography and charismatic rap delivery.</p>
                 </div>
-
             </div>
         </section>
 
-        <!-- DISCOGRAPHY SECTION -->
+        <!-- DISCOGRAPHY -->
         <section id="discography">
             <h2>Discography</h2>
-
-            <!-- Dreamweaver EP -->
             <div class="album" id="dreamweaver">
                 <h3>Dreamweaver (Debut EP)</h3>
                 <ul>
@@ -114,13 +80,9 @@
                     <li>Tuonela (B-Side)</li>
                 </ul>
             </div>
-
-            <!-- The World's a Stage -->
             <div class="album" id="worlds">
                 <h3>The World's a Stage (Single Album)</h3>
             </div>
-
-            <!-- Schmetterling EP -->
             <div class="album" id="schmetterling">
                 <h3>Schmetterling (2nd EP)</h3>
                 <ul>
@@ -129,50 +91,32 @@
                     <li>Spotlight</li>
                 </ul>
             </div>
-
-            <!-- Instrumental Album -->
             <div class="album" id="instrumental">
                 <h3>Hun-Dun Hezou/Wan-Deon Hapzau (Instrumental)</h3>
             </div>
-
         </section>
 
-        <!-- PRE-SAVE SECTION -->
+        <!-- PRE-SAVE -->
         <section id="presave">
             <h2>Pre-Save HN-DN Music</h2>
-            <form>
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="Your email..." required>
-
-                <label for="platform">Platform</label>
-                <select id="platform" name="platform">
+            <form id="presave-form">
+                <input type="email" id="email" placeholder="Your email" required>
+                <select id="platform">
                     <option value="spotify">Spotify</option>
                     <option value="apple-music">Apple Music</option>
                     <option value="youtube-music">YouTube Music</option>
                     <option value="other">Other</option>
                 </select>
-
-                <button type="submit">Pre-Save Now</button>
+                <button type="submit">Pre-Save</button>
             </form>
         </section>
 
         <!-- FOOTER -->
         <footer id="main-footer">
-            <div class="footer-left">
-                <p>&copy; 2026 HN-DN | All Rights Reserved</p>
-            </div>
-            <div class="footer-right">
-                <ul>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">YouTube</a></li>
-                </ul>
-            </div>
+            <p>&copy; 2026 HN-DN | All Rights Reserved</p>
         </footer>
-
     </div>
 
-    <!-- JS -->
     <script src="script.js"></script>
 </body>
 </html>
