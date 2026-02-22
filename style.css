@@ -1,211 +1,52 @@
-/* ==========================
-   GLOBAL RESET
-========================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* GLOBAL */
+* {margin:0;padding:0;box-sizing:border-box;}
+html {scroll-behavior:smooth;}
+body {background:#000;color:#fff;font-family:'Hotel Oriental', serif;line-height:1.6;}
 
-html {
-    scroll-behavior: smooth;
-}
+/* HEADER */
+#main-header {position:fixed;top:0;width:100%;padding:15px 50px;display:flex;justify-content:space-between;align-items:center;background:rgba(0,0,0,0.95);z-index:999;border-bottom:1px solid rgba(255,255,255,0.1);}
+#main-navigation ul{display:flex;list-style:none;}
+#main-navigation li{margin-left:25px;}
+#main-navigation a{color:#fff;text-decoration:none;font-size:0.85rem;}
 
-body {
-    background-color: #000;
-    color: #fff;
-    font-family: 'Hotel Oriental', serif;
-    line-height: 1.6;
-}
+/* HERO */
+#hero{height:80vh;display:flex;justify-content:center;align-items:center;text-align:center;padding:0 20px;}
+#hero-content h1{font-size:4rem;margin-bottom:15px;}
+#hero-content h2{font-size:2rem;opacity:0.85;margin-bottom:15px;}
+#hero-content p{font-size:1rem;opacity:0.7;max-width:600px;margin:0 auto 20px auto;}
+#hero-content button{padding:12px 25px;background:#fff;color:#000;border:none;cursor:pointer;}
 
-/* ==========================
-   HEADER
-========================== */
-#main-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 15px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(0,0,0,0.95);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    z-index: 999;
-}
+/* SECTIONS */
+section{padding:80px 10%;border-bottom:1px solid rgba(255,255,255,0.05);}
+h2{font-size:2rem;margin-bottom:20px;text-transform:uppercase;}
 
-#main-navigation ul {
-    display: flex;
-    list-style: none;
-}
+/* MEMBERS GRID */
+.members-grid{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-around;}
+.member-profile{flex:1 1 250px;padding:20px;text-align:center;border:1px solid rgba(255,255,255,0.1);cursor:pointer;}
+.member-profile h3{font-size:1.2rem;margin-bottom:5px;}
+.member-profile p{font-size:0.9rem;opacity:0.8;}
 
-#main-navigation li {
-    margin-left: 25px;
-}
+/* ALBUMS */
+.album{padding:20px;border-left:2px solid #fff;margin-bottom:30px;}
+.album h3{font-size:1.2rem;margin-bottom:10px;}
+.album ul{padding-left:15px;}
+.album li{margin-bottom:5px;opacity:0.8;}
 
-#main-navigation a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.85rem;
-}
+/* PRE-SAVE */
+#presave form{display:flex;flex-direction:column;max-width:350px;}
+#presave input,#presave select,#presave button{padding:10px;margin-bottom:15px;font-family:inherit;}
+#presave input,#presave select{background:#000;color:#fff;border:1px solid #fff;}
+#presave button{background:#fff;color:#000;border:none;cursor:pointer;}
 
-/* ==========================
-   HERO
-========================== */
-#hero {
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px;
-}
+/* FOOTER */
+#main-footer{padding:60px 10%;background:#000;text-align:center;font-size:0.9rem;opacity:0.8;}
 
-#hero-content h1 {
-    font-size: 4rem;
-    margin-bottom: 15px;
-}
-
-#hero-content h2 {
-    font-size: 2rem;
-    opacity: 0.85;
-    margin-bottom: 15px;
-}
-
-#hero-content p {
-    font-size: 1rem;
-    opacity: 0.7;
-    max-width: 600px;
-    margin: 0 auto 20px auto;
-}
-
-.hero-button {
-    padding: 12px 25px;
-    background: #fff;
-    color: #000;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 0.85rem;
-}
-
-/* ==========================
-   SECTIONS
-========================== */
-section {
-    padding: 100px 10%;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-}
-
-/* ==========================
-   MEMBERS GRID
-========================== */
-.members-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-around;
-}
-
-.member-profile {
-    flex: 1 1 250px;
-    padding: 20px;
-    text-align: center;
-    border: 1px solid rgba(255,255,255,0.1);
-}
-
-.member-profile img {
-    width: 100%;
-    max-width: 180px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.member-profile h3 {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-}
-
-.member-profile p {
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
-/* ==========================
-   ALBUMS
-========================== */
-.album {
-    padding: 20px;
-    border-left: 2px solid #fff;
-    margin-bottom: 30px;
-}
-
-.album h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.album ul {
-    padding-left: 15px;
-}
-
-.album li {
-    margin-bottom: 5px;
-    opacity: 0.8;
-}
-
-/* ==========================
-   PRE-SAVE FORM
-========================== */
-#presave form {
-    display: flex;
-    flex-direction: column;
-    max-width: 350px;
-}
-
-#presave input, #presave select, #presave button {
-    padding: 10px;
-    margin-bottom: 15px;
-    font-family: inherit;
-}
-
-#presave input, #presave select {
-    background: #000;
-    color: #fff;
-    border: 1px solid #fff;
-}
-
-#presave button {
-    background: #fff;
-    color: #000;
-    border: none;
-    cursor: pointer;
-}
-
-/* ==========================
-   FOOTER
-========================== */
-#main-footer {
-    padding: 60px 10%;
-    background: #000;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-#main-footer a {
-    text-decoration: none;
-    color: #fff;
-    opacity: 0.7;
-}
-
-/* ==========================
-   RESPONSIVE
-========================== */
-@media (max-width: 900px) {
-    #main-header { flex-direction: column; padding: 15px; }
-    #main-navigation ul { justify-content: center; flex-wrap: wrap; margin-top: 10px; }
-    #hero-content h1 { font-size: 3rem; }
-    #hero-content h2 { font-size: 1.5rem; }
-    section { padding: 80px 8%; }
-    .member-profile { padding: 15px; flex: 1 1 45%; }
+/* RESPONSIVE */
+@media(max-width:900px){
+    #main-header{flex-direction:column;padding:15px;}
+    #main-navigation ul{justify-content:center;flex-wrap:wrap;margin-top:10px;}
+    #hero-content h1{font-size:3rem;}
+    #hero-content h2{font-size:1.5rem;}
+    section{padding:60px 8%;}
+    .member-profile{flex:1 1 45%;}
 }
