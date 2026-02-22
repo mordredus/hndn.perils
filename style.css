@@ -1,7 +1,4 @@
-/* ===================================================== */
 /* GLOBAL RESET */
-/* ===================================================== */
-
 * {
     margin: 0;
     padding: 0;
@@ -16,50 +13,27 @@ body {
     background-color: #000;
     color: #fff;
     font-family: "Hotel Oriental", serif;
-    letter-spacing: 1px;
     line-height: 1.7;
-    overflow-x: hidden;
 }
 
-/* ===================================================== */
 /* TYPOGRAPHY */
-/* ===================================================== */
-
 h1, h2, h3, h4 {
-    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 4px;
 }
 
-h1 {
-    font-size: 5rem;
-}
+h1 { font-size: 5rem; }
+h2 { font-size: 2.5rem; margin-bottom: 2rem; }
+h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+p { max-width: 800px; opacity: 0.85; }
 
-h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-}
-
-h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-p {
-    max-width: 800px;
-    opacity: 0.85;
-}
-
-/* ===================================================== */
 /* HEADER */
-/* ===================================================== */
-
 #main-header {
     position: fixed;
     top: 0;
     width: 100%;
     padding: 20px 60px;
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(0,0,0,0.95);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -67,29 +41,14 @@ p {
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-#logo-container img {
-    height: 35px;
-    margin-right: 20px;
-    filter: brightness(0) invert(1);
-}
-
-#main-navigation ul {
-    display: flex;
-    list-style: none;
-}
-
-#main-navigation li {
-    margin-left: 30px;
-}
-
+#main-navigation ul { display: flex; list-style: none; }
+#main-navigation li { margin-left: 30px; }
 #main-navigation a {
     text-decoration: none;
-    color: white;
+    color: #fff;
     font-size: 0.8rem;
-    transition: 0.3s ease;
     position: relative;
 }
-
 #main-navigation a::after {
     content: "";
     position: absolute;
@@ -100,112 +59,56 @@ p {
     background: white;
     transition: 0.3s ease;
 }
+#main-navigation a:hover::after { width: 100%; }
 
-#main-navigation a:hover::after {
-    width: 100%;
-}
-
-/* ===================================================== */
-/* HERO SECTION */
-/* ===================================================== */
-
+/* HERO */
 #hero {
     height: 100vh;
-    background: linear-gradient(to bottom, #000 60%, #111);
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
 }
+#hero-content { transition: transform 0.5s ease; }
 
-#hero-content {
-    animation: fadeIn 2s ease forwards;
-}
-
-#hero h2 {
-    margin-top: 20px;
-    font-size: 1.2rem;
-    opacity: 0.7;
-}
-
-/* ===================================================== */
 /* SECTIONS */
-/* ===================================================== */
-
 section {
     padding: 140px 10%;
     border-bottom: 1px solid rgba(255,255,255,0.05);
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease, transform 1s ease;
 }
+section:nth-child(even) { background-color: #050505; }
 
-section:nth-child(even) {
-    background-color: #050505;
-}
-
-/* ===================================================== */
 /* MEMBER PROFILES */
-/* ===================================================== */
-
 .member-profile {
     margin-bottom: 60px;
     padding: 40px;
     border: 1px solid rgba(255,255,255,0.1);
     transition: 0.4s ease;
 }
-
 .member-profile:hover {
-    background-color: white;
-    color: black;
+    background-color: #fff;
+    color: #000;
     transform: translateY(-10px);
 }
+.member-profile:hover p, .member-profile:hover strong { color: #000; }
 
-.member-profile:hover p,
-.member-profile:hover strong {
-    color: black;
-}
-
-/* ===================================================== */
-/* DISCOGRAPHY */
-/* ===================================================== */
-
+/* ALBUMS */
 .album {
     margin-bottom: 60px;
     padding: 40px;
-    border-left: 2px solid white;
+    border-left: 2px solid #fff;
     transition: 0.3s ease;
 }
+.album:hover { background: rgba(255,255,255,0.05); }
+.album ul { margin-top: 15px; padding-left: 20px; }
+.album li { margin-bottom: 8px; opacity: 0.8; }
 
-.album:hover {
-    background: rgba(255,255,255,0.05);
-}
-
-.album ul {
-    margin-top: 15px;
-    padding-left: 20px;
-}
-
-.album li {
-    margin-bottom: 8px;
-    opacity: 0.8;
-}
-
-/* ===================================================== */
 /* PRE-SAVE */
-/* ===================================================== */
-
-#presave form {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-}
-
-#presave label {
-    margin-bottom: 8px;
-    font-size: 0.8rem;
-}
-
-#presave input,
-#presave select {
+#presave form { display: flex; flex-direction: column; max-width: 400px; margin-top: 30px; }
+#presave input, #presave select {
     padding: 12px;
     margin-bottom: 20px;
     background: black;
@@ -213,7 +116,6 @@ section:nth-child(even) {
     color: white;
     font-family: inherit;
 }
-
 #presave button {
     padding: 15px;
     background: white;
@@ -224,17 +126,9 @@ section:nth-child(even) {
     text-transform: uppercase;
     letter-spacing: 3px;
 }
+#presave button:hover { background: black; color: white; border: 1px solid white; }
 
-#presave button:hover {
-    background: black;
-    color: white;
-    border: 1px solid white;
-}
-
-/* ===================================================== */
 /* FOOTER */
-/* ===================================================== */
-
 #main-footer {
     padding: 80px 10%;
     background: black;
@@ -242,58 +136,14 @@ section:nth-child(even) {
     justify-content: space-between;
     flex-wrap: wrap;
 }
+#main-footer a { text-decoration: none; color: white; opacity: 0.7; transition: 0.3s; }
+#main-footer a:hover { opacity: 1; }
 
-#main-footer ul {
-    list-style: none;
-}
-
-#main-footer a {
-    text-decoration: none;
-    color: white;
-    opacity: 0.7;
-    transition: 0.3s;
-}
-
-#main-footer a:hover {
-    opacity: 1;
-}
-
-/* ===================================================== */
-/* ANIMATIONS */
-/* ===================================================== */
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(40px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* ===================================================== */
 /* RESPONSIVE */
-/* ===================================================== */
-
 @media (max-width: 900px) {
-
-    h1 {
-        font-size: 3rem;
-    }
-
-    #main-header {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    #main-navigation ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 10px;
-    }
-
-    section {
-        padding: 100px 8%;
-    }
-
-    .member-profile,
-    .album {
-        padding: 25px;
-    }
+    h1 { font-size: 3rem; }
+    #main-header { flex-direction: column; padding: 20px; }
+    #main-navigation ul { flex-wrap: wrap; justify-content: center; margin-top: 10px; }
+    section { padding: 100px 8%; }
+    .member-profile, .album { padding: 25px; }
 }
