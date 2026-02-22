@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HN-DN Universe</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>HN-DN</h1>
+    <p class="subtitle">Leafless Tea — May 14</p>
+</header>
+
+<nav>
+    <button onclick="showSection('albums')">Albums</button>
+    <button onclick="showSection('members')">Members</button>
+    <button onclick="showSection('presave')">Pre-Save</button>
+</nav>
+
+<!-- Albums Section -->
+<section id="albums" class="section active">
+    <h2>Albums</h2>
+    <div class="album" onclick="selectAlbum('Leafless Tea')">
+        <p>Leafless Tea</p>
+    </div>
+    <div class="album" onclick="selectAlbum('Eclipse: Origin')">
+        <p>Eclipse: Origin</p>
+    </div>
+    <div id="album-info"></div>
+</section>
+
+<!-- Members Section (Wuxing-inspired) -->
+<section id="members" class="section">
+    <h2>Members</h2>
+    <div class="members-grid">
+        <div class="member" onclick="showBio('WOOD')">LIAN</div>
+        <div class="member" onclick="showBio('FIRE')">RYU</div>
+        <div class="member" onclick="showBio('EARTH')">KAEL</div>
+        <div class="member" onclick="showBio('METAL')">SEI</div>
+        <div class="member" onclick="showBio('WATER')">NOX</div>
+    </div>
+    <div id="bio-display"></div>
+</section>
+
+<!-- Pre-Save Section -->
+<section id="presave" class="section">
+    <h2>Exclusive Pre-Save</h2>
+    <p id="presave-status">Locked Content</p>
+    <button onclick="unlockPresave()">Pre-Save Now</button>
+    <div id="exclusive-content"></div>
+</section>
+
+<footer>
+    <p>© HN-DN Universe</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

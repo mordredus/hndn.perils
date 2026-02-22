@@ -1,0 +1,106 @@
+/* Font */
+@font-face {
+    font-family: 'HotelOriental';
+    src: url('fonts/HotelOriental.ttf') format('truetype');
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    background: #000;
+    color: #fff;
+    font-family: 'HotelOriental', serif;
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+
+/* Header */
+header {
+    padding: 60px 20px 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.subtitle {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    opacity: 0.6;
+}
+
+/* Navigation */
+nav {
+    margin: 20px 0;
+}
+
+nav button {
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav button:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Sections */
+.section {
+    display: none;
+    padding: 40px 20px;
+}
+
+.section.active {
+    display: block;
+}
+
+/* Albums & Members */
+.album, .member {
+    border: 1px solid #fff;
+    padding: 20px;
+    margin: 15px auto;
+    width: 200px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.album:hover, .member:hover {
+    background: #fff;
+    color: #000;
+}
+
+#album-info, #bio-display, #exclusive-content {
+    margin-top: 20px;
+    opacity: 0.8;
+}
+
+/* Members Grid */
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    font-size: 0.7rem;
+    opacity: 0.5;
+}
+
+
+
