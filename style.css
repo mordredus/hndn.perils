@@ -1,106 +1,93 @@
-/* Font */
-@font-face {
-    font-family: 'HotelOriental';
-    src: url('fonts/HotelOriental.ttf') format('truetype');
-}
-
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body */
 body {
-    background: #000;
-    color: #fff;
-    font-family: 'HotelOriental', serif;
-    text-align: center;
-    letter-spacing: 1.5px;
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background: #000;
+  color: #fff;
+  scroll-behavior: smooth;
 }
 
-/* Header */
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.chaos-text {
+  font-size: 4rem;
+  letter-spacing: 10px;
+  animation: flicker 2s infinite;
+}
+
+@keyframes flicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
 header {
-    padding: 60px 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  position: fixed;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
 }
 
-header h1 {
-    font-size: 3rem;
-    font-weight: 400;
+nav a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-.subtitle {
-    margin-top: 10px;
-    font-size: 0.9rem;
-    opacity: 0.6;
+nav a:hover {
+  opacity: 0.6;
 }
 
-/* Navigation */
-nav {
-    margin: 20px 0;
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-nav button {
-    background: none;
-    border: 1px solid #fff;
-    color: #fff;
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-nav button:hover {
-    background: #fff;
-    color: #000;
-}
-
-/* Sections */
 .section {
-    display: none;
-    padding: 40px 20px;
+  padding: 120px 10%;
 }
 
-.section.active {
-    display: block;
+.dark {
+  background: #111;
 }
 
-/* Albums & Members */
-.album, .member {
-    border: 1px solid #fff;
-    padding: 20px;
-    margin: 15px auto;
-    width: 200px;
-    cursor: pointer;
-    transition: 0.3s;
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
-.album:hover, .member:hover {
-    background: #fff;
-    color: #000;
+.member-card {
+  border: 1px solid white;
+  padding: 20px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-#album-info, #bio-display, #exclusive-content {
-    margin-top: 20px;
-    opacity: 0.8;
+.member-card:hover {
+  background: white;
+  color: black;
 }
 
-/* Members Grid */
-.members-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 20px;
-    justify-items: center;
+.album {
+  margin-bottom: 40px;
 }
 
-/* Footer */
 footer {
-    text-align: center;
-    padding: 40px 0;
-    font-size: 0.7rem;
-    opacity: 0.5;
+  text-align: center;
+  padding: 40px;
 }
-
-
-
