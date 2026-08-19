@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="HN-DN — Leafless Tea. Official concept website for the May 14 release."
+    >
+
+    <meta
+        name="theme-color"
+        content="#080808"
+    >
+
+    <title>HN-DN — LEAFLESS TEA</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+    <!-- =========================================
+         LOADING SCREEN
+         ========================================= -->
+
+    <div
+        class="loader"
+        id="loader"
+    >
+
+        <div class="loader-logo">
+            HN-DN
+        </div>
+
+        <div class="loader-line"></div>
+
+        <div class="loader-text">
+            LEAFLESS TEA
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         HEADER
+         ========================================= -->
+
+    <header class="site-header">
+
+        <a
+            href="#home"
+            class="logo"
+        >
+            HN-DN
+        </a>
+
+
+        <nav class="navigation">
+
+            <a href="#albums">
+                Albums
+            </a>
+
+            <a href="#members">
+                Members
+            </a>
+
+            <a href="#presave">
+                Pre-Save
+            </a>
+
+        </nav>
+
+
+        <button
+            class="menu-button"
+            id="menuButton"
+            aria-label="Open navigation"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+        </button>
+
+    </header>
+
+
+    <!-- =========================================
+         MOBILE NAVIGATION
+         ========================================= -->
+
+    <div
+        class="mobile-menu"
+        id="mobileMenu"
+    >
+
+        <a href="#albums">
+            Albums
+        </a>
+
+        <a href="#members">
+            Members
+        </a>
+
+        <a href="#presave">
+            Pre-Save
+        </a>
+
+    </div>
+
+
+    <!-- =========================================
+         MAIN
+         ========================================= -->
+
+    <main>
+
+        <!-- =====================================
+             HERO
+             ===================================== -->
+
+        <section
+            class="hero"
+            id="home"
+        >
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    HN-DN / 01
+                </p>
+
+                <h1>
+                    LEAFLESS
+                    <br>
+                    TEA
+                </h1>
+
+                <p class="hero-description">
+
+                    A study in absence,
+                    memory, transformation,
+                    and the forces that remain
+                    after everything familiar
+                    disappears.
+
+                </p>
+
+
+                <div class="release-date">
+
+                    <span>
+                        RELEASE
+                    </span>
+
+                    <strong>
+                        MAY 14
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-symbol">
+
+                <div class="symbol-circle">
+                    伍
+                </div>
+
+                <span>
+                    WUXING / 五行
+                </span>
+
+            </div>
+
+
+            <div class="scroll-indicator">
+
+                <span>
+                    SCROLL
+                </span>
+
+                <div></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             INTRODUCTION
+             ===================================== -->
+
+        <section class="intro">
+
+            <div class="section-number">
+                01
+            </div>
+
+            <div class="intro-content">
+
+                <p class="small-heading">
+                    THE CONCEPT
+                </p>
+
+                <h2>
+                    What remains
+                    <br>
+                    when the leaves
+                    <br>
+                    are gone?
+                </h2>
+
+                <p>
+
+                    <em>Leafless Tea</em> explores
+                    the tension between growth
+                    and disappearance.
+
+                    <br><br>
+
+                    The concept draws from
+                    Wuxing — Wood, Fire, Earth,
+                    Metal, and Water — with each
+                    force representing a distinct
+                    identity within HN-DN.
+
+                    <br><br>
+
+                    But there is one who exists
+                    outside the five.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             ALBUMS
+             ===================================== -->
+
+        <section
+            class="albums section"
+            id="albums"
+        >
+
+            <div class="section-header">
+
+                <div>
+
+                    <span class="section-number">
+                        02
+                    </span>
+
+                    <p class="small-heading">
+                        DISCOGRAPHY
+                    </p>
+
+                </div>
+
+                <h2>
+                    Albums
+                </h2>
+
+            </div>
+
+
+            <div class="album-grid">
+
+                <!-- LEAFLESS TEA -->
+
+                <button
+                    class="album-card"
+                    data-album="leafless"
+                >
+
+                    <div class="album-number">
+                        01
+                    </div>
+
+                    <div class="album-art">
+
+                        <span>
+                            HN-DN
+                        </span>
+
+                        <strong>
+                            LEAFLESS
+                            <br>
+                            TEA
+                        </strong>
+
+                        <small>
+                            MAY 14
+                        </small>
+
+                    </div>
+
+                    <div class="album-info">
+
+                        <h3>
+                            Leafless Tea
+                        </h3>
+
+                        <span>
+                            May 14
+                        </span>
+
+                    </div>
+
+                </button>
+
+
+                <!-- AFTERIMAGE -->
+
+                <button
+                    class="album-card"
+                    data-album="afterimage"
+                >
+
+                    <div class="album-number">
+                        02
+                    </div>
+
+                    <div class="album-art alternate">
+
+                        <span>
+                            HN-DN
+                        </span>
+
+                        <strong>
+                            AFTER
+                            <br>
+                            IMAGE
+                        </strong>
+
+                        <small>
+                            TBA
+                        </small>
+
+                    </div>
+
+                    <div class="album-info">
+
+                        <h3>
+                            Afterimage
+                        </h3>
+
+                        <span>
+                            TBA
+                        </span>
+
+                    </div>
+
+                </button>
+
+
+                <!-- FIVEFOLD -->
+
+                <button
+                    class="album-card"
+                    data-album="fivefold"
+                >
+
+                    <div class="album-number">
+                        03
+                    </div>
+
+                    <div class="album-art third">
+
+                        <span>
+                            HN-DN
+                        </span>
+
+                        <strong>
+                            FIVE
+                            <br>
+                            FOLD
+                        </strong>
+
+                        <small>
+                            TBA
+                        </small>
+
+                    </div>
+
+                    <div class="album-info">
+
+                        <h3>
+                            Fivefold
+                        </h3>
+
+                        <span>
+                            TBA
+                        </span>
+
+                    </div>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             ALBUM MODAL
+             ===================================== -->
+
+        <div
+            class="modal"
+            id="albumModal"
+            aria-hidden="true"
+        >
+
+            <div class="modal-content">
+
+                <button
+                    class="close-button"
+                    id="closeModal"
+                    aria-label="Close album information"
+                >
+                    ×
+                </button>
+
+                <p
+                    class="small-heading"
+                    id="modalNumber"
+                >
+                    ALBUM 01
+                </p>
+
+                <h2 id="modalTitle">
+                    Leafless Tea
+                </h2>
+
+                <div class="modal-line"></div>
+
+                <p id="modalDescription">
+                    Description
+                </p>
+
+                <div class="modal-details">
+
+                    <div>
+
+                        <span>
+                            RELEASE
+                        </span>
+
+                        <strong id="modalRelease">
+                            May 14
+                        </strong>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            GENRE
+                        </span>
+
+                        <strong id="modalGenre">
+                            Alternative Pop
+                        </strong>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            CONCEPT
+                        </span>
+
+                        <strong id="modalConcept">
+                            Wuxing
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================
+             MEMBERS
+             ===================================== -->
+
+        <section
+            class="members section"
+            id="members"
+        >
+
+            <div class="section-header">
+
+                <div>
+
+                    <span class="section-number">
+                        03
+                    </span>
+
+                    <p class="small-heading">
+                        THE SIX
+                    </p>
+
+                </div>
+
+                <h2>
+                    Members
+                </h2>
+
+            </div>
+
+
+            <div class="member-list">
+
+                <!-- MEMBER 01 -->
+
+                <button
+                    class="member"
+                    data-member="wood"
+                >
+
+                    <span class="member-index">
+                        01
+                    </span>
+
+                    <span class="member-name">
+                        WOOD
+                    </span>
+
+                    <span class="member-symbol">
+                        木
+                    </span>
+
+                    <span class="member-arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+                <!-- MEMBER 02 -->
+
+                <button
+                    class="member"
+                    data-member="fire"
+                >
+
+                    <span class="member-index">
+                        02
+                    </span>
+
+                    <span class="member-name">
+                        FIRE
+                    </span>
+
+                    <span class="member-symbol">
+                        火
+                    </span>
+
+                    <span class="member-arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+                <!-- MEMBER 03 -->
+
+                <button
+                    class="member"
+                    data-member="earth"
+                >
+
+                    <span class="member-index">
+                        03
+                    </span>
+
+                    <span class="member-name">
+                        EARTH
+                    </span>
+
+                    <span class="member-symbol">
+                        土
+                    </span>
+
+                    <span class="member-arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+                <!-- MEMBER 04 -->
+
+                <button
+                    class="member"
+                    data-member="metal"
+                >
+
+                    <span class="member-index">
+                        04
+                    </span>
+
+                    <span class="member-name">
+                        METAL
+                    </span>
+
+                    <span class="member-symbol">
+                        金
+                    </span>
+
+                    <span class="member-arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+                <!-- MEMBER 05 -->
+
+                <button
+                    class="member"
+                    data-member="water"
+                >
+
+                    <span class="member-index">
+                        05
+                    </span>
+
+                    <span class="member-name">
+                        WATER
+                    </span>
+
+                    <span class="member-symbol">
+                        水
+                    </span>
+
+                    <span class="member-arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+                <!-- MEMBER 06 -->
+
+                <button
+                    class="member member-sixth"
+                    data-member="vincent"
+                >
+
+                    <span class="member-index">
+                        06
+                    </span>
+
+                    <span class="member-name">
+                        VINCENT
+                    </span>
+
+                    <span class="member-symbol">
+                        六
+                    </span>
+
+                    <span class="member-arrow">
+                        →
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             MEMBER MODAL
+             ===================================== -->
+
+        <div
+            class="modal"
+            id="memberModal"
+            aria-hidden="true"
+        >
+
+            <div class="modal-content member-modal">
+
+                <button
+                    class="close-button"
+                    id="closeMemberModal"
+                    aria-label="Close member information"
+                >
+                    ×
+                </button>
+
+
+                <span
+                    class="member-modal-symbol"
+                    id="memberModalSymbol"
+                >
+                    木
+                </span>
+
+
+                <p
+                    class="small-heading"
+                    id="memberModalElement"
+                >
+                    WOOD
+                </p>
+
+
+                <h2 id="memberModalName">
+                    Member
+                </h2>
+
+
+                <p
+                    class="member-nationality"
+                    id="memberModalNationality"
+                >
+                    HN-DN
+                </p>
+
+
+                <div class="modal-line"></div>
+
+
+                <p id="memberModalBio">
+                    Member biography.
+                </p>
+
+
+                <div class="member-attribute">
+
+                    <span>
+                        ATTRIBUTE
+                    </span>
+
+                    <strong id="memberModalAttribute">
+                        Growth
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================
+             PRE-SAVE
+             ===================================== -->
+
+        <section
+            class="presave section"
+            id="presave"
+        >
+
+            <div class="presave-inner">
+
+                <span class="section-number">
+                    04
+                </span>
+
+                <p class="small-heading">
+                    MAY 14 / LEAFLESS TEA
+                </p>
+
+                <h2>
+                    Be there
+                    <br>
+                    when it falls.
+                </h2>
+
+                <p>
+
+                    Pre-save <em>Leafless Tea</em>
+                    to unlock an exclusive preview
+                    from the HN-DN universe.
+
+                </p>
+
+
+                <button
+                    class="unlock-button"
+                    id="unlockButton"
+                >
+
+                    <span>
+                        UNLOCK PRE-SAVE
+                    </span>
+
+                    <span>
+                        →
+                    </span>
+
+                </button>
+
+
+                <div
+                    class="teaser"
+                    id="teaser"
+                >
+
+                    <div class="teaser-mark">
+                        HN-DN
+                    </div>
+
+                    <p>
+                        EXCLUSIVE TEASER UNLOCKED
+                    </p>
+
+                    <h3>
+                        "The leaves were
+                        never meant to stay."
+                    </h3>
+
+                    <span>
+                        LEAFLESS TEA / MAY 14
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+         ========================================= -->
+
+    <footer class="footer">
+
+        <div>
+            HN-DN
+        </div>
+
+        <div>
+            LEAFLESS TEA / MAY 14
+        </div>
+
+        <div>
+            © 2026 HN-DN CONCEPT
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
