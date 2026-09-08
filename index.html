@@ -2,840 +2,412 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <title>HN-DN — Story Archive</title>
 
-    <meta
-        name="description"
-        content="HN-DN — Leafless Tea. Official concept website for the May 14 release."
-    >
-
-    <meta
-        name="theme-color"
-        content="#080808"
-    >
-
-    <title>HN-DN — LEAFLESS TEA</title>
-
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- =========================================
+    <!-- =========================
          LOADING SCREEN
-         ========================================= -->
+    ========================== -->
 
-    <div
-        class="loader"
-        id="loader"
-    >
-
-        <div class="loader-logo">
-            HN-DN
-        </div>
-
-        <div class="loader-line"></div>
-
-        <div class="loader-text">
-            LEAFLESS TEA
-        </div>
-
+    <div id="loading-screen">
+        <div class="loading-logo">HN-DN</div>
+        <div class="loading-text">INSERT COIN</div>
     </div>
 
 
-    <!-- =========================================
+    <!-- =========================
          HEADER
-         ========================================= -->
+    ========================== -->
 
-    <header class="site-header">
+    <header>
 
-        <a
-            href="#home"
-            class="logo"
-        >
+        <div class="logo">
             HN-DN
-        </a>
+            <span>STORY ARCHIVE</span>
+        </div>
 
-
-        <nav class="navigation">
-
-            <a href="#albums">
-                Albums
-            </a>
-
-            <a href="#members">
-                Members
-            </a>
-
-            <a href="#presave">
-                Pre-Save
-            </a>
-
+        <nav>
+            <a href="#stories">STORIES</a>
+            <a href="#side-stories">SIDE STORY</a>
+            <a href="#members">MEMBERS</a>
         </nav>
-
-
-        <button
-            class="menu-button"
-            id="menuButton"
-            aria-label="Open navigation"
-            aria-expanded="false"
-        >
-            <span></span>
-            <span></span>
-        </button>
 
     </header>
 
 
-    <!-- =========================================
-         MOBILE NAVIGATION
-         ========================================= -->
-
-    <div
-        class="mobile-menu"
-        id="mobileMenu"
-    >
-
-        <a href="#albums">
-            Albums
-        </a>
-
-        <a href="#members">
-            Members
-        </a>
-
-        <a href="#presave">
-            Pre-Save
-        </a>
-
-    </div>
-
-
-    <!-- =========================================
-         MAIN
-         ========================================= -->
+    <!-- =========================
+         HERO
+    ========================== -->
 
     <main>
 
-        <!-- =====================================
-             HERO
-             ===================================== -->
+        <section class="hero">
 
-        <section
-            class="hero"
-            id="home"
-        >
-
-            <div class="hero-content">
-
-                <p class="eyebrow">
-                    HN-DN / 01
-                </p>
-
-                <h1>
-                    LEAFLESS
-                    <br>
-                    TEA
-                </h1>
-
-                <p class="hero-description">
-
-                    A study in absence,
-                    memory, transformation,
-                    and the forces that remain
-                    after everything familiar
-                    disappears.
-
-                </p>
-
-
-                <div class="release-date">
-
-                    <span>
-                        RELEASE
-                    </span>
-
-                    <strong>
-                        MAY 14
-                    </strong>
-
-                </div>
-
+            <div class="neon-sign">
+                <span>WELCOME TO</span>
+                <h1>HN-DN</h1>
+                <span>STORY ARCHIVE</span>
             </div>
 
-
-            <div class="hero-symbol">
-
-                <div class="symbol-circle">
-                    伍
-                </div>
-
-                <span>
-                    WUXING / 五行
-                </span>
-
-            </div>
-
+            <p class="hero-description">
+                SIX MEMBERS.<br>
+                SIX PERSPECTIVES.<br>
+                ONE STORY.
+            </p>
 
             <div class="scroll-indicator">
+                ↓ SCROLL TO ENTER ↓
+            </div>
 
-                <span>
-                    SCROLL
-                </span>
+        </section>
 
-                <div></div>
+
+        <!-- =========================
+             STORIES
+        ========================== -->
+
+        <section id="stories" class="section">
+
+            <div class="section-heading">
+                <span>01</span>
+                <h2>MAIN STORIES</h2>
+                <span>— THE MENU —</span>
+            </div>
+
+
+            <div class="story-grid">
+
+
+                <!-- DREAMWEAVER -->
+
+                <article
+                    class="story-card dreamweaver"
+                    data-story="dreamweaver"
+                    data-title="DREAMWEAVER"
+                    data-character="EZRA"
+                >
+
+                    <div class="card-number">01</div>
+
+                    <div class="card-content">
+
+                        <span class="story-type">
+                            ALBUM / STORY
+                        </span>
+
+                        <h3>DREAMWEAVER</h3>
+
+                        <p class="protagonist">
+                            EZRA
+                        </p>
+
+                        <div class="card-buttons">
+
+                            <button
+                                onclick="openStory('dreamweaver')"
+                            >
+                                READ STORY
+                            </button>
+
+                            <button
+                                onclick="listenAlbum('Dreamweaver')"
+                            >
+                                LISTEN
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SCHMETTERLING -->
+
+                <article
+                    class="story-card schmetterling"
+                    data-story="schmetterling"
+                >
+
+                    <div class="card-number">02</div>
+
+                    <div class="card-content">
+
+                        <span class="story-type">
+                            ALBUM / STORY
+                        </span>
+
+                        <h3>SCHMETTERLING</h3>
+
+                        <p class="protagonist">
+                            DANIEL
+                        </p>
+
+                        <div class="card-buttons">
+
+                            <button
+                                onclick="openStory('schmetterling')"
+                            >
+                                READ STORY
+                            </button>
+
+                            <button
+                                onclick="listenAlbum('Schmetterling')"
+                            >
+                                LISTEN
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- REBIS -->
+
+                <article
+                    class="story-card rebis"
+                    data-story="rebis"
+                >
+
+                    <div class="card-number">03</div>
+
+                    <div class="card-content">
+
+                        <span class="story-type">
+                            ALBUM / STORY
+                        </span>
+
+                        <h3>REBIS</h3>
+
+                        <p class="protagonist">
+                            SALLY
+                        </p>
+
+                        <div class="card-buttons">
+
+                            <button
+                                onclick="openStory('rebis')"
+                            >
+                                READ STORY
+                            </button>
+
+                            <button
+                                onclick="listenAlbum('Rebis')"
+                            >
+                                LISTEN
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- YGGDRASILL -->
+
+                <article
+                    class="story-card yggdrasill"
+                    data-story="yggdrasill"
+                >
+
+                    <div class="card-number">04</div>
+
+                    <div class="card-content">
+
+                        <span class="story-type">
+                            ALBUM / STORY
+                        </span>
+
+                        <h3>YGGDRASILL</h3>
+
+                        <p class="protagonist">
+                            SYLVAN
+                        </p>
+
+                        <div class="card-buttons">
+
+                            <button
+                                onclick="openStory('yggdrasill')"
+                            >
+                                READ STORY
+                            </button>
+
+                            <button
+                                onclick="listenAlbum('Yggdrasill')"
+                            >
+                                LISTEN
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- TMI -->
+
+                <article
+                    class="story-card tmi locked"
+                >
+
+                    <div class="lock-overlay">
+
+                        <div class="lock-symbol">
+                            ███
+                        </div>
+
+                        <span>
+                            ACCESS RESTRICTED
+                        </span>
+
+                    </div>
+
+                    <div class="card-number">05</div>
+
+                    <div class="card-content">
+
+                        <span class="story-type">
+                            ALBUM / STORY
+                        </span>
+
+                        <h3>TMI</h3>
+
+                        <p class="protagonist">
+                            RIYA
+                        </p>
+
+                        <div class="upcoming">
+                            UPCOMING
+                        </div>
+
+                    </div>
+
+                </article>
 
             </div>
 
         </section>
 
 
-        <!-- =====================================
-             INTRODUCTION
-             ===================================== -->
+        <!-- =========================
+             SIDE STORY
+        ========================== -->
 
-        <section class="intro">
+        <section id="side-stories" class="section side-section">
 
-            <div class="section-number">
-                01
-            </div>
+            <div class="section-heading">
 
-            <div class="intro-content">
+                <span>02</span>
 
-                <p class="small-heading">
-                    THE CONCEPT
-                </p>
+                <h2>SIDE STORY</h2>
 
-                <h2>
-                    What remains
-                    <br>
-                    when the leaves
-                    <br>
-                    are gone?
-                </h2>
-
-                <p>
-
-                    <em>Leafless Tea</em> explores
-                    the tension between growth
-                    and disappearance.
-
-                    <br><br>
-
-                    The concept draws from
-                    Wuxing — Wood, Fire, Earth,
-                    Metal, and Water — with each
-                    force representing a distinct
-                    identity within HN-DN.
-
-                    <br><br>
-
-                    But there is one who exists
-                    outside the five.
-
-                </p>
+                <span>— CHEF'S SPECIAL —</span>
 
             </div>
 
-        </section>
 
+            <article
+                class="diner-card"
+                onclick="openStory('diner')"
+            >
 
-        <!-- =====================================
-             ALBUMS
-             ===================================== -->
+                <div class="diner-sign">
 
-        <section
-            class="albums section"
-            id="albums"
-        >
+                    <span>HN-DN PRESENTS</span>
 
-            <div class="section-header">
+                    <h3>PERILOUS<br>DINER</h3>
 
-                <div>
-
-                    <span class="section-number">
-                        02
-                    </span>
-
-                    <p class="small-heading">
-                        DISCOGRAPHY
-                    </p>
+                    <small>
+                        A SIDE STORY
+                    </small>
 
                 </div>
 
-                <h2>
-                    Albums
-                </h2>
 
-            </div>
+                <div class="diner-info">
 
+                    <span>PROTAGONIST</span>
 
-            <div class="album-grid">
-
-                <!-- LEAFLESS TEA -->
-
-                <button
-                    class="album-card"
-                    data-album="leafless"
-                >
-
-                    <div class="album-number">
-                        01
-                    </div>
-
-                    <div class="album-art">
-
-                        <span>
-                            HN-DN
-                        </span>
-
-                        <strong>
-                            LEAFLESS
-                            <br>
-                            TEA
-                        </strong>
-
-                        <small>
-                            MAY 14
-                        </small>
-
-                    </div>
-
-                    <div class="album-info">
-
-                        <h3>
-                            Leafless Tea
-                        </h3>
-
-                        <span>
-                            May 14
-                        </span>
-
-                    </div>
-
-                </button>
-
-
-                <!-- AFTERIMAGE -->
-
-                <button
-                    class="album-card"
-                    data-album="afterimage"
-                >
-
-                    <div class="album-number">
-                        02
-                    </div>
-
-                    <div class="album-art alternate">
-
-                        <span>
-                            HN-DN
-                        </span>
-
-                        <strong>
-                            AFTER
-                            <br>
-                            IMAGE
-                        </strong>
-
-                        <small>
-                            TBA
-                        </small>
-
-                    </div>
-
-                    <div class="album-info">
-
-                        <h3>
-                            Afterimage
-                        </h3>
-
-                        <span>
-                            TBA
-                        </span>
-
-                    </div>
-
-                </button>
-
-
-                <!-- FIVEFOLD -->
-
-                <button
-                    class="album-card"
-                    data-album="fivefold"
-                >
-
-                    <div class="album-number">
-                        03
-                    </div>
-
-                    <div class="album-art third">
-
-                        <span>
-                            HN-DN
-                        </span>
-
-                        <strong>
-                            FIVE
-                            <br>
-                            FOLD
-                        </strong>
-
-                        <small>
-                            TBA
-                        </small>
-
-                    </div>
-
-                    <div class="album-info">
-
-                        <h3>
-                            Fivefold
-                        </h3>
-
-                        <span>
-                            TBA
-                        </span>
-
-                    </div>
-
-                </button>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================
-             ALBUM MODAL
-             ===================================== -->
-
-        <div
-            class="modal"
-            id="albumModal"
-            aria-hidden="true"
-        >
-
-            <div class="modal-content">
-
-                <button
-                    class="close-button"
-                    id="closeModal"
-                    aria-label="Close album information"
-                >
-                    ×
-                </button>
-
-                <p
-                    class="small-heading"
-                    id="modalNumber"
-                >
-                    ALBUM 01
-                </p>
-
-                <h2 id="modalTitle">
-                    Leafless Tea
-                </h2>
-
-                <div class="modal-line"></div>
-
-                <p id="modalDescription">
-                    Description
-                </p>
-
-                <div class="modal-details">
-
-                    <div>
-
-                        <span>
-                            RELEASE
-                        </span>
-
-                        <strong id="modalRelease">
-                            May 14
-                        </strong>
-
-                    </div>
-
-                    <div>
-
-                        <span>
-                            GENRE
-                        </span>
-
-                        <strong id="modalGenre">
-                            Alternative Pop
-                        </strong>
-
-                    </div>
-
-                    <div>
-
-                        <span>
-                            CONCEPT
-                        </span>
-
-                        <strong id="modalConcept">
-                            Wuxing
-                        </strong>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- =====================================
-             MEMBERS
-             ===================================== -->
-
-        <section
-            class="members section"
-            id="members"
-        >
-
-            <div class="section-header">
-
-                <div>
-
-                    <span class="section-number">
-                        03
-                    </span>
-
-                    <p class="small-heading">
-                        THE SIX
-                    </p>
-
-                </div>
-
-                <h2>
-                    Members
-                </h2>
-
-            </div>
-
-
-            <div class="member-list">
-
-                <!-- MEMBER 01 -->
-
-                <button
-                    class="member"
-                    data-member="wood"
-                >
-
-                    <span class="member-index">
-                        01
-                    </span>
-
-                    <span class="member-name">
-                        WOOD
-                    </span>
-
-                    <span class="member-symbol">
-                        木
-                    </span>
-
-                    <span class="member-arrow">
-                        →
-                    </span>
-
-                </button>
-
-
-                <!-- MEMBER 02 -->
-
-                <button
-                    class="member"
-                    data-member="fire"
-                >
-
-                    <span class="member-index">
-                        02
-                    </span>
-
-                    <span class="member-name">
-                        FIRE
-                    </span>
-
-                    <span class="member-symbol">
-                        火
-                    </span>
-
-                    <span class="member-arrow">
-                        →
-                    </span>
-
-                </button>
-
-
-                <!-- MEMBER 03 -->
-
-                <button
-                    class="member"
-                    data-member="earth"
-                >
-
-                    <span class="member-index">
-                        03
-                    </span>
-
-                    <span class="member-name">
-                        EARTH
-                    </span>
-
-                    <span class="member-symbol">
-                        土
-                    </span>
-
-                    <span class="member-arrow">
-                        →
-                    </span>
-
-                </button>
-
-
-                <!-- MEMBER 04 -->
-
-                <button
-                    class="member"
-                    data-member="metal"
-                >
-
-                    <span class="member-index">
-                        04
-                    </span>
-
-                    <span class="member-name">
-                        METAL
-                    </span>
-
-                    <span class="member-symbol">
-                        金
-                    </span>
-
-                    <span class="member-arrow">
-                        →
-                    </span>
-
-                </button>
-
-
-                <!-- MEMBER 05 -->
-
-                <button
-                    class="member"
-                    data-member="water"
-                >
-
-                    <span class="member-index">
-                        05
-                    </span>
-
-                    <span class="member-name">
-                        WATER
-                    </span>
-
-                    <span class="member-symbol">
-                        水
-                    </span>
-
-                    <span class="member-arrow">
-                        →
-                    </span>
-
-                </button>
-
-
-                <!-- MEMBER 06 -->
-
-                <button
-                    class="member member-sixth"
-                    data-member="vincent"
-                >
-
-                    <span class="member-index">
-                        06
-                    </span>
-
-                    <span class="member-name">
-                        VINCENT
-                    </span>
-
-                    <span class="member-symbol">
-                        六
-                    </span>
-
-                    <span class="member-arrow">
-                        →
-                    </span>
-
-                </button>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================
-             MEMBER MODAL
-             ===================================== -->
-
-        <div
-            class="modal"
-            id="memberModal"
-            aria-hidden="true"
-        >
-
-            <div class="modal-content member-modal">
-
-                <button
-                    class="close-button"
-                    id="closeMemberModal"
-                    aria-label="Close member information"
-                >
-                    ×
-                </button>
-
-
-                <span
-                    class="member-modal-symbol"
-                    id="memberModalSymbol"
-                >
-                    木
-                </span>
-
-
-                <p
-                    class="small-heading"
-                    id="memberModalElement"
-                >
-                    WOOD
-                </p>
-
-
-                <h2 id="memberModalName">
-                    Member
-                </h2>
-
-
-                <p
-                    class="member-nationality"
-                    id="memberModalNationality"
-                >
-                    HN-DN
-                </p>
-
-
-                <div class="modal-line"></div>
-
-
-                <p id="memberModalBio">
-                    Member biography.
-                </p>
-
-
-                <div class="member-attribute">
-
-                    <span>
-                        ATTRIBUTE
-                    </span>
-
-                    <strong id="memberModalAttribute">
-                        Growth
-                    </strong>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- =====================================
-             PRE-SAVE
-             ===================================== -->
-
-        <section
-            class="presave section"
-            id="presave"
-        >
-
-            <div class="presave-inner">
-
-                <span class="section-number">
-                    04
-                </span>
-
-                <p class="small-heading">
-                    MAY 14 / LEAFLESS TEA
-                </p>
-
-                <h2>
-                    Be there
-                    <br>
-                    when it falls.
-                </h2>
-
-                <p>
-
-                    Pre-save <em>Leafless Tea</em>
-                    to unlock an exclusive preview
-                    from the HN-DN universe.
-
-                </p>
-
-
-                <button
-                    class="unlock-button"
-                    id="unlockButton"
-                >
-
-                    <span>
-                        UNLOCK PRE-SAVE
-                    </span>
-
-                    <span>
-                        →
-                    </span>
-
-                </button>
-
-
-                <div
-                    class="teaser"
-                    id="teaser"
-                >
-
-                    <div class="teaser-mark">
-                        HN-DN
-                    </div>
+                    <strong>VINCENT</strong>
 
                     <p>
-                        EXCLUSIVE TEASER UNLOCKED
+                        Some stories aren't meant to be ordered.
                     </p>
 
-                    <h3>
-                        "The leaves were
-                        never meant to stay."
-                    </h3>
+                    <button>
+                        ENTER DINER →
+                    </button>
 
-                    <span>
-                        LEAFLESS TEA / MAY 14
-                    </span>
+                </div>
 
+            </article>
+
+        </section>
+
+
+        <!-- =========================
+             MEMBERS
+        ========================== -->
+
+        <section id="members" class="section members-section">
+
+            <div class="section-heading">
+
+                <span>03</span>
+
+                <h2>THE MEMBERS</h2>
+
+                <span>— STAFF DIRECTORY —</span>
+
+            </div>
+
+
+            <div class="members-grid">
+
+                <div class="member" onclick="openMember('Ezra')">
+                    <span>01</span>
+                    <h3>EZRA</h3>
+                    <small>DREAMWEAVER</small>
+                </div>
+
+                <div class="member" onclick="openMember('Daniel')">
+                    <span>02</span>
+                    <h3>DANIEL</h3>
+                    <small>SCHMETTERLING</small>
+                </div>
+
+                <div class="member" onclick="openMember('Sally')">
+                    <span>03</span>
+                    <h3>SALLY</h3>
+                    <small>REBIS</small>
+                </div>
+
+                <div class="member" onclick="openMember('Sylvan')">
+                    <span>04</span>
+                    <h3>SYLVAN</h3>
+                    <small>YGGDRASILL</small>
+                </div>
+
+                <div class="member" onclick="openMember('Riya')">
+                    <span>05</span>
+                    <h3>RIYA</h3>
+                    <small>TMI</small>
+                </div>
+
+                <div class="member" onclick="openMember('Vincent')">
+                    <span>06</span>
+                    <h3>VINCENT</h3>
+                    <small>HN-DN</small>
                 </div>
 
             </div>
@@ -845,23 +417,66 @@
     </main>
 
 
-    <!-- =========================================
+    <!-- =========================
+         MODAL
+    ========================== -->
+
+    <div id="modal" class="modal">
+
+        <div class="modal-box">
+
+            <button
+                class="close-modal"
+                onclick="closeModal()"
+            >
+                ×
+            </button>
+
+            <span id="modal-type">
+                STORY
+            </span>
+
+            <h2 id="modal-title">
+                HN-DN
+            </h2>
+
+            <p id="modal-content">
+                Loading...
+            </p>
+
+            <button
+                class="modal-action"
+                onclick="closeModal()"
+            >
+                CLOSE
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
          FOOTER
-         ========================================= -->
+    ========================== -->
 
-    <footer class="footer">
+    <footer>
 
-        <div>
+        <div class="footer-logo">
             HN-DN
         </div>
 
-        <div>
-            LEAFLESS TEA / MAY 14
-        </div>
+        <p>
+            OPEN 24 HOURS.
+        </p>
 
-        <div>
-            © 2026 HN-DN CONCEPT
-        </div>
+        <p class="footer-warning">
+            SOME STORIES ARE BETTER LEFT UNREAD.
+        </p>
+
+        <small>
+            © HN-DN STORY ARCHIVE
+        </small>
 
     </footer>
 
