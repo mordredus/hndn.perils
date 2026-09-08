@@ -1,14 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oswald:wght@400;500;600&display=swap');
-
-
-/* =========================
-   RESET
-========================= */
+@import url(
+    'https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oswald:wght@400;500;600&display=swap'
+);
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -17,20 +14,17 @@ html {
 
 body {
     background: #050505;
-    color: #f1eee6;
+    color: #eee9df;
     font-family: "Oswald", sans-serif;
     overflow-x: hidden;
 }
 
 
-/* =========================
-   LOADING
-========================= */
+/* LOADING */
 
-#loading-screen {
+#loading {
     position: fixed;
     inset: 0;
-    background: #050505;
     z-index: 9999;
 
     display: flex;
@@ -38,23 +32,26 @@ body {
     justify-content: center;
     align-items: center;
 
-    animation: loadingOut 1s ease forwards;
-    animation-delay: 1.8s;
+    background: #050505;
+
+    animation: loading-out 1s forwards;
+    animation-delay: 1.4s;
 }
 
 .loading-logo {
     font-family: "Archivo Black", sans-serif;
-    font-size: clamp(4rem, 15vw, 10rem);
-    letter-spacing: -5px;
+    font-size: clamp(5rem, 18vw, 12rem);
+    letter-spacing: -.08em;
 }
 
 .loading-text {
-    font-size: 0.8rem;
-    letter-spacing: 0.4em;
     margin-top: 15px;
+    font-size: .7rem;
+    letter-spacing: .5em;
+    opacity: .6;
 }
 
-@keyframes loadingOut {
+@keyframes loading-out {
     to {
         opacity: 0;
         visibility: hidden;
@@ -62,27 +59,24 @@ body {
 }
 
 
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 header {
     position: fixed;
     top: 0;
     width: 100%;
-
-    z-index: 100;
+    z-index: 1000;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 22px 5vw;
+    padding: 20px 5vw;
 
-    background: rgba(5,5,5,0.9);
-    border-bottom: 1px solid #252525;
+    background: rgba(5,5,5,.9);
+    border-bottom: 1px solid #292929;
 
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
 }
 
 .logo {
@@ -92,37 +86,32 @@ header {
 
 .logo span {
     display: block;
-
     font-family: "Oswald", sans-serif;
-    font-size: 0.55rem;
-
-    letter-spacing: 0.3em;
-    font-weight: 400;
+    font-size: .55rem;
+    font-weight: normal;
+    letter-spacing: .35em;
+    opacity: .55;
 }
 
 nav {
     display: flex;
-    gap: 30px;
+    gap: 28px;
 }
 
 nav a {
-    color: #f1eee6;
+    color: inherit;
     text-decoration: none;
-
-    font-size: 0.75rem;
-    letter-spacing: 0.15em;
-
-    transition: 0.2s;
+    font-size: .7rem;
+    letter-spacing: .2em;
+    transition: .2s;
 }
 
 nav a:hover {
-    opacity: 0.5;
+    opacity: .45;
 }
 
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero {
     min-height: 100vh;
@@ -133,63 +122,57 @@ nav a:hover {
     align-items: center;
 
     text-align: center;
-
-    padding: 120px 20px 50px;
+    padding: 120px 20px 60px;
 
     background:
         repeating-linear-gradient(
             0deg,
-            transparent,
-            transparent 3px,
-            rgba(255,255,255,0.015) 4px
+            transparent 0 3px,
+            rgba(255,255,255,.015) 4px
         );
 }
 
-.neon-sign {
-    border: 3px solid #f1eee6;
+.diner-sign {
     padding: 35px 60px;
-
-    box-shadow:
-        0 0 15px rgba(255,255,255,0.12),
-        inset 0 0 15px rgba(255,255,255,0.05);
+    border: 3px solid #eee9df;
 
     transform: rotate(-1deg);
+
+    box-shadow:
+        0 0 20px rgba(255,255,255,.08),
+        inset 0 0 20px rgba(255,255,255,.04);
 }
 
-.neon-sign span {
+.diner-sign small {
     display: block;
-
-    font-size: 0.75rem;
-    letter-spacing: 0.5em;
+    font-size: .7rem;
+    letter-spacing: .45em;
 }
 
-.neon-sign h1 {
-    font-family: "Archivo Black", sans-serif;
+.diner-sign h1 {
+    margin: 15px 0;
 
+    font-family: "Archivo Black", sans-serif;
     font-size: clamp(5rem, 18vw, 13rem);
 
-    line-height: 0.85;
-
-    letter-spacing: -0.08em;
+    line-height: .8;
+    letter-spacing: -.08em;
 }
 
-.hero-description {
-    margin-top: 50px;
-
-    font-size: 0.8rem;
+.hero-subtitle {
+    margin-top: 45px;
+    font-size: .75rem;
     line-height: 2;
-
-    letter-spacing: 0.3em;
+    letter-spacing: .35em;
 }
 
-.scroll-indicator {
+.scroll {
     position: absolute;
     bottom: 30px;
 
-    font-size: 0.65rem;
-    letter-spacing: 0.3em;
-
-    opacity: 0.5;
+    font-size: .6rem;
+    letter-spacing: .3em;
+    opacity: .45;
 
     animation: bounce 2s infinite;
 }
@@ -201,234 +184,162 @@ nav a:hover {
 }
 
 
-/* =========================
-   SECTIONS
-========================= */
+/* SECTIONS */
 
 .section {
     max-width: 1400px;
     margin: auto;
-
     padding: 120px 5vw;
 }
 
-.section-heading {
+.section-header {
     display: grid;
-    grid-template-columns: 50px 1fr auto;
+    grid-template-columns: 45px 1fr auto;
+    align-items: center;
     gap: 20px;
 
-    align-items: center;
-
-    margin-bottom: 50px;
-
-    border-bottom: 1px solid #303030;
     padding-bottom: 15px;
+    margin-bottom: 45px;
+
+    border-bottom: 1px solid #292929;
 }
 
-.section-heading span {
-    font-size: 0.7rem;
-    letter-spacing: 0.15em;
-    opacity: 0.5;
+.section-header span {
+    font-size: .65rem;
+    letter-spacing: .2em;
+    opacity: .45;
 }
 
-.section-heading h2 {
+.section-header h2 {
     font-family: "Archivo Black", sans-serif;
     font-size: clamp(1.8rem, 4vw, 3rem);
 }
 
 
-/* =========================
-   STORY GRID
-========================= */
+/* ALBUMS */
 
-.story-grid {
+.album-grid {
     display: grid;
-
     grid-template-columns: repeat(2, 1fr);
-
-    gap: 20px;
+    gap: 18px;
 }
 
-.story-card {
+.album {
     position: relative;
-
     min-height: 360px;
-
     padding: 35px;
 
     border: 1px solid #292929;
-
     overflow: hidden;
 
+    cursor: pointer;
+
     transition:
-        transform 0.3s,
-        border-color 0.3s;
+        transform .3s,
+        border-color .3s;
 }
 
-.story-card:hover {
-    transform: translateY(-8px);
+.album:hover {
+    transform: translateY(-7px);
     border-color: #777;
 }
 
-.card-number {
+.album-number {
     position: absolute;
     top: 20px;
     right: 25px;
-
-    font-size: 0.7rem;
-    opacity: 0.4;
+    font-size: .65rem;
+    opacity: .35;
 }
 
-.card-content {
+.album-info {
     position: absolute;
     bottom: 35px;
     left: 35px;
 }
 
-.story-type {
-    font-size: 0.65rem;
-    letter-spacing: 0.25em;
-    opacity: 0.5;
+.album-type {
+    font-size: .6rem;
+    letter-spacing: .3em;
+    opacity: .5;
 }
 
-.story-card h3 {
+.album h3 {
+    margin-top: 10px;
+
     font-family: "Archivo Black", sans-serif;
+    font-size: clamp(2.2rem, 5vw, 4.5rem);
 
-    font-size: clamp(2rem, 5vw, 4rem);
-
-    margin-top: 8px;
-
-    letter-spacing: -0.04em;
+    line-height: .9;
+    letter-spacing: -.05em;
 }
 
-.protagonist {
-    margin-top: 5px;
+.album p {
+    margin-top: 10px;
 
-    font-size: 0.8rem;
-    letter-spacing: 0.4em;
-
-    opacity: 0.6;
-}
-
-.card-buttons {
-    display: flex;
-    gap: 10px;
-
-    margin-top: 25px;
-}
-
-button {
-    background: transparent;
-
-    color: inherit;
-
-    border: 1px solid #555;
-
-    padding: 10px 16px;
-
-    font-family: inherit;
-
-    font-size: 0.65rem;
-
-    letter-spacing: 0.15em;
-
-    cursor: pointer;
-
-    transition: 0.2s;
-}
-
-button:hover {
-    background: #f1eee6;
-    color: #050505;
+    font-size: .75rem;
+    letter-spacing: .4em;
+    opacity: .55;
 }
 
 
-/* =========================
-   ALBUM IDENTITIES
-========================= */
+/* ALBUM THEMES */
 
 .dreamweaver {
-    background:
-        linear-gradient(135deg, #090909, #111525);
+    background: linear-gradient(135deg, #090909, #111525);
 }
 
 .schmetterling {
-    background:
-        linear-gradient(135deg, #090909, #17150e);
+    background: linear-gradient(135deg, #090909, #18150d);
 }
 
 .rebis {
-    background:
-        linear-gradient(135deg, #090909, #151515);
+    background: linear-gradient(135deg, #090909, #151515);
 }
 
 .yggdrasill {
-    background:
-        linear-gradient(135deg, #090909, #0b150f);
+    background: linear-gradient(135deg, #090909, #0b160f);
 }
 
 .tmi {
-    background:
-        linear-gradient(135deg, #090909, #180d0d);
+    background: linear-gradient(135deg, #090909, #190b0b);
 }
 
 
-/* =========================
-   LOCKED TMI
-========================= */
+/* TMI */
 
-.locked {
+.tmi {
     cursor: not-allowed;
 }
 
-.lock-overlay {
+.lock {
     position: absolute;
     inset: 0;
 
     display: flex;
     flex-direction: column;
-
     justify-content: center;
     align-items: center;
 
-    background: rgba(0,0,0,0.72);
-
-    z-index: 5;
-
-    text-align: center;
+    background: rgba(0,0,0,.8);
 }
 
-.lock-symbol {
-    font-family: monospace;
-    font-size: 2rem;
-
-    margin-bottom: 15px;
+.lock strong {
+    font-family: "Archivo Black", sans-serif;
+    font-size: clamp(2rem, 6vw, 5rem);
 }
 
-.lock-overlay span {
-    font-size: 0.65rem;
-    letter-spacing: 0.35em;
-}
-
-.upcoming {
-    margin-top: 20px;
-
-    display: inline-block;
-
-    padding: 8px 15px;
-
-    border: 1px solid #777;
-
-    font-size: 0.65rem;
-    letter-spacing: 0.3em;
+.lock span {
+    margin-top: 15px;
+    font-size: .6rem;
+    letter-spacing: .35em;
+    opacity: .55;
 }
 
 
-/* =========================
-   DINER
-========================= */
+/* PERILOUS DINER */
 
-.side-section {
+.side-story {
     max-width: 1100px;
 }
 
@@ -436,126 +347,102 @@ button:hover {
     min-height: 500px;
 
     display: grid;
-
     grid-template-columns: 1fr 1fr;
 
-    border: 2px solid #30251f;
+    border: 2px solid #322820;
 
     background:
         repeating-linear-gradient(
             45deg,
-            #0b0b0b,
-            #0b0b0b 10px,
-            #0e0e0e 10px,
-            #0e0e0e 20px
+            #090909 0 10px,
+            #0e0e0e 10px 20px
         );
 
     cursor: pointer;
-
-    transition: 0.3s;
+    transition: .3s;
 }
 
 .diner-card:hover {
     transform: scale(1.01);
 }
 
-.diner-sign {
+.diner-title {
     display: flex;
     flex-direction: column;
-
     justify-content: center;
     align-items: center;
 
     text-align: center;
 
-    padding: 30px;
-
-    border-right: 1px solid #30251f;
+    border-right: 1px solid #322820;
 }
 
-.diner-sign span {
-    font-size: 0.65rem;
-    letter-spacing: 0.3em;
+.diner-title span {
+    font-size: .6rem;
+    letter-spacing: .35em;
 }
 
-.diner-sign h3 {
+.diner-title h3 {
+    margin: 25px 0;
+
     font-family: "Archivo Black", sans-serif;
-
     font-size: clamp(3rem, 7vw, 6rem);
 
-    line-height: 0.85;
-
-    margin: 25px 0;
+    line-height: .82;
 }
 
-.diner-sign small {
-    letter-spacing: 0.25em;
-}
-
-.diner-info {
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-
+.diner-details {
     padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.diner-info span {
-    font-size: 0.6rem;
-    letter-spacing: 0.3em;
-    opacity: 0.5;
+.diner-details small {
+    font-size: .6rem;
+    letter-spacing: .3em;
+    opacity: .5;
 }
 
-.diner-info strong {
-    font-family: "Archivo Black", sans-serif;
-
-    font-size: 3rem;
-
+.diner-details h4 {
     margin: 10px 0 30px;
+
+    font-family: "Archivo Black", sans-serif;
+    font-size: 3rem;
 }
 
-.diner-info p {
+.diner-details p {
     max-width: 300px;
-
-    font-size: 0.9rem;
     line-height: 1.7;
-
-    opacity: 0.6;
+    opacity: .6;
 }
 
-.diner-info button {
+.diner-details button {
     width: fit-content;
-
     margin-top: 35px;
 }
 
 
-/* =========================
-   MEMBERS
-========================= */
+/* MEMBERS */
 
-.members-grid {
+.members {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
 
-    border-top: 1px solid #303030;
-    border-left: 1px solid #303030;
+    border-top: 1px solid #292929;
+    border-left: 1px solid #292929;
 }
 
 .member {
-    padding: 35px;
+    min-height: 190px;
+    padding: 30px;
 
-    min-height: 180px;
-
-    border-right: 1px solid #303030;
-    border-bottom: 1px solid #303030;
+    border-right: 1px solid #292929;
+    border-bottom: 1px solid #292929;
 
     cursor: pointer;
-
-    transition: 0.25s;
+    transition: .25s;
 }
 
 .member:hover {
@@ -563,153 +450,130 @@ button:hover {
 }
 
 .member span {
-    font-size: 0.65rem;
-    opacity: 0.4;
+    font-size: .6rem;
+    opacity: .4;
 }
 
 .member h3 {
-    font-family: "Archivo Black", sans-serif;
-
-    font-size: 2rem;
-
     margin-top: 30px;
+
+    font-family: "Archivo Black", sans-serif;
+    font-size: 2rem;
 }
 
 .member small {
-    font-size: 0.6rem;
-    letter-spacing: 0.2em;
-
-    opacity: 0.5;
+    font-size: .6rem;
+    letter-spacing: .2em;
+    opacity: .45;
 }
 
 
-/* =========================
-   MODAL
-========================= */
+/* MODAL */
 
-.modal {
+#modal {
     position: fixed;
     inset: 0;
-
-    z-index: 500;
+    z-index: 5000;
 
     display: none;
-
     justify-content: center;
     align-items: center;
 
-    background: rgba(0,0,0,0.85);
-
     padding: 20px;
+
+    background: rgba(0,0,0,.88);
 }
 
-.modal.active {
+#modal.active {
     display: flex;
 }
 
 .modal-box {
     position: relative;
 
-    max-width: 700px;
     width: 100%;
+    max-width: 720px;
 
     padding: 60px;
 
     background: #080808;
-
     border: 1px solid #555;
 
-    box-shadow: 0 20px 80px rgba(0,0,0,0.8);
+    box-shadow: 0 20px 80px rgba(0,0,0,.9);
 }
 
-.close-modal {
+#close-modal {
     position: absolute;
-
     top: 15px;
     right: 15px;
 
-    border: none;
+    border: 0;
+    background: none;
 
+    color: inherit;
     font-size: 1.5rem;
+    cursor: pointer;
 }
 
 #modal-type {
-    font-size: 0.65rem;
-    letter-spacing: 0.3em;
-
-    opacity: 0.5;
+    font-size: .6rem;
+    letter-spacing: .3em;
+    opacity: .5;
 }
 
 #modal-title {
-    font-family: "Archivo Black", sans-serif;
+    margin: 20px 0 30px;
 
+    font-family: "Archivo Black", sans-serif;
     font-size: clamp(2.5rem, 7vw, 5rem);
 
-    margin: 15px 0 30px;
+    line-height: .9;
 }
 
 #modal-content {
-    line-height: 1.8;
-
     color: #aaa;
-
+    line-height: 1.8;
     white-space: pre-line;
 }
 
-.modal-action {
-    margin-top: 35px;
-}
 
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer {
+    padding: 110px 20px;
     text-align: center;
-
-    padding: 100px 20px;
-
     border-top: 1px solid #222;
 }
 
-.footer-logo {
+footer > div {
     font-family: "Archivo Black", sans-serif;
-
     font-size: 4rem;
 }
 
 footer p {
-    font-size: 0.7rem;
-
-    letter-spacing: 0.3em;
-
-    margin-top: 15px;
+    margin-top: 12px;
+    font-size: .65rem;
+    letter-spacing: .3em;
 }
 
-.footer-warning {
-    opacity: 0.3;
+footer .warning {
+    opacity: .3;
 }
 
 footer small {
     display: block;
-
-    margin-top: 60px;
-
-    font-size: 0.55rem;
-
-    opacity: 0.3;
+    margin-top: 55px;
+    font-size: .5rem;
+    opacity: .25;
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media (max-width: 700px) {
 
     header {
-        padding: 18px 20px;
+        padding: 17px 20px;
     }
 
     nav {
@@ -717,14 +581,14 @@ footer small {
     }
 
     nav a {
-        font-size: 0.55rem;
+        font-size: .5rem;
     }
 
-    .neon-sign {
+    .diner-sign {
         padding: 25px 30px;
     }
 
-    .story-grid {
+    .album-grid {
         grid-template-columns: 1fr;
     }
 
@@ -732,18 +596,19 @@ footer small {
         grid-template-columns: 1fr;
     }
 
-    .diner-sign {
-        border-right: none;
-        border-bottom: 1px solid #30251f;
+    .diner-title {
         min-height: 300px;
+        padding: 30px;
+
+        border-right: 0;
+        border-bottom: 1px solid #322820;
     }
 
-    .members-grid {
-        grid-template-columns: 1fr 1fr;
+    .members {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .modal-box {
-        padding: 40px 25px;
+        padding: 45px 25px;
     }
-
 }
