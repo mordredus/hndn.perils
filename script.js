@@ -1,673 +1,248 @@
-/* =========================================
-   LOADING SCREEN
-   ========================================= */
+/* =========================
+   STORY DATABASE
+========================= */
 
-window.addEventListener("load", () => {
+const stories = {
 
-    const loader =
-        document.getElementById("loader");
+    dreamweaver: {
+        title: "DREAMWEAVER",
+        type: "STORY / EZRA",
+        content:
+`EZRA
 
-    setTimeout(() => {
+The first story.
 
-        loader.classList.add("hidden");
+The dream begins here.
 
-    }, 900);
+[ STORY CONTENT PLACEHOLDER ]
 
-});
-
-
-/* =========================================
-   MOBILE NAVIGATION
-   ========================================= */
-
-const menuButton =
-    document.getElementById("menuButton");
-
-const mobileMenu =
-    document.getElementById("mobileMenu");
-
-
-menuButton.addEventListener("click", () => {
-
-    const isOpen =
-        mobileMenu.classList.toggle("open");
-
-    menuButton.setAttribute(
-        "aria-expanded",
-        isOpen
-    );
-
-});
-
-
-document
-    .querySelectorAll(".mobile-menu a")
-    .forEach(link => {
-
-        link.addEventListener("click", () => {
-
-            mobileMenu.classList.remove(
-                "open"
-            );
-
-            menuButton.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-        });
-
-    });
-
-
-/* =========================================
-   ALBUM DATA
-   ========================================= */
-
-const albums = {
-
-    leafless: {
-
-        number:
-            "ALBUM 01",
-
-        title:
-            "Leafless Tea",
-
-        release:
-            "May 14",
-
-        genre:
-            "Alternative Pop",
-
-        concept:
-            "Wuxing",
-
-        description:
-            "HN-DN's debut concept release explores absence, memory, transformation, and the relationship between the five elemental forces."
+This section can eventually contain the complete Dreamweaver narrative, divided into chapters.`
     },
 
+    schmetterling: {
+        title: "SCHMETTERLING",
+        type: "STORY / DANIEL",
+        content:
+`DANIEL
 
-    afterimage: {
+A different perspective.
 
-        number:
-            "ALBUM 02",
+A different story.
 
-        title:
-            "Afterimage",
+[ STORY CONTENT PLACEHOLDER ]
 
-        release:
-            "TBA",
-
-        genre:
-            "Experimental Pop",
-
-        concept:
-            "Memory",
-
-        description:
-            "A future HN-DN release centered around the traces left behind after something disappears."
+The Schmetterling narrative will eventually be loaded here.`
     },
 
+    rebis: {
+        title: "REBIS",
+        type: "STORY / SALLY",
+        content:
+`SALLY
 
-    fivefold: {
+Two halves.
 
-        number:
-            "ALBUM 03",
+One identity.
 
-        title:
-            "Fivefold",
+[ STORY CONTENT PLACEHOLDER ]
 
-        release:
-            "TBA",
+The Rebis narrative will eventually be loaded here.`
+    },
 
-        genre:
-            "Alternative / Electronic",
+    yggdrasill: {
+        title: "YGGDRASILL",
+        type: "STORY / SYLVAN",
+        content:
+`SYLVAN
 
-        concept:
-            "Five Elements",
+The tree remembers.
 
-        description:
-            "Five forces. Five perspectives. One world. Fivefold expands the Wuxing concept into a larger HN-DN universe."
+[ STORY CONTENT PLACEHOLDER ]
+
+The Yggdrasill narrative will eventually be loaded here.`
+    },
+
+    diner: {
+        title: "PERILOUS DINER",
+        type: "SIDE STORY / VINCENT",
+        content:
+`VINCENT
+
+WELCOME TO THE DINER.
+
+Your table is waiting.
+
+Your order has already been placed.
+
+[ STORY CONTENT PLACEHOLDER ]
+
+Side stories may reveal things that the main stories never mention.`
     }
 
 };
 
 
-/* =========================================
-   ALBUM MODAL
-   ========================================= */
+/* =========================
+   OPEN STORY
+========================= */
 
-const albumModal =
-    document.getElementById("albumModal");
+function openStory(id) {
 
-const closeModal =
-    document.getElementById("closeModal");
+    const story = stories[id];
 
-const modalNumber =
-    document.getElementById("modalNumber");
+    if (!story) return;
 
-const modalTitle =
-    document.getElementById("modalTitle");
+    document.getElementById("modal-type").textContent =
+        story.type;
 
-const modalDescription =
-    document.getElementById("modalDescription");
+    document.getElementById("modal-title").textContent =
+        story.title;
 
-const modalRelease =
-    document.getElementById("modalRelease");
+    document.getElementById("modal-content").textContent =
+        story.content;
 
-const modalGenre =
-    document.getElementById("modalGenre");
-
-const modalConcept =
-    document.getElementById("modalConcept");
-
-
-document
-    .querySelectorAll(".album-card")
-    .forEach(card => {
-
-        card.addEventListener("click", () => {
-
-            const albumID =
-                card.dataset.album;
-
-            const album =
-                albums[albumID];
-
-            if (!album) return;
-
-
-            modalNumber.textContent =
-                album.number;
-
-            modalTitle.textContent =
-                album.title;
-
-            modalDescription.textContent =
-                album.description;
-
-            modalRelease.textContent =
-                album.release;
-
-            modalGenre.textContent =
-                album.genre;
-
-            modalConcept.textContent =
-                album.concept;
-
-
-            albumModal.classList.add(
-                "open"
-            );
-
-            albumModal.setAttribute(
-                "aria-hidden",
-                "false"
-            );
-
-        });
-
-    });
-
-
-closeModal.addEventListener(
-    "click",
-    closeAlbumModal
-);
-
-
-function closeAlbumModal() {
-
-    albumModal.classList.remove(
-        "open"
-    );
-
-    albumModal.setAttribute(
-        "aria-hidden",
-        "true"
-    );
+    document.getElementById("modal").classList.add("active");
 
 }
 
 
-/* =========================================
-   MEMBER DATA
-   ========================================= */
+/* =========================
+   MEMBER DATABASE
+========================= */
 
 const members = {
 
-    wood: {
-
-        element:
-            "WOOD",
-
-        symbol:
-            "木",
-
-        name:
-            "Member One",
-
-        nationality:
-            "HN-DN MEMBER",
-
-        attribute:
-            "Growth",
-
-        bio:
-            "Wood represents growth, renewal, flexibility, and beginnings. This member embodies the forward movement of HN-DN."
+    Ezra: {
+        role: "PROTAGONIST — DREAMWEAVER"
     },
 
-
-    fire: {
-
-        element:
-            "FIRE",
-
-        symbol:
-            "火",
-
-        name:
-            "Member Two",
-
-        nationality:
-            "HN-DN MEMBER",
-
-        attribute:
-            "Passion",
-
-        bio:
-            "Fire represents intensity, expression, transformation, and energy. This member carries the group's emotional heat."
+    Daniel: {
+        role: "PROTAGONIST — SCHMETTERLING"
     },
 
-
-    earth: {
-
-        element:
-            "EARTH",
-
-        symbol:
-            "土",
-
-        name:
-            "Member Three",
-
-        nationality:
-            "HN-DN MEMBER",
-
-        attribute:
-            "Stability",
-
-        bio:
-            "Earth represents grounding, patience, balance, and endurance. This member acts as a stabilizing force."
+    Sally: {
+        role: "PROTAGONIST — REBIS"
     },
 
-
-    metal: {
-
-        element:
-            "METAL",
-
-        symbol:
-            "金",
-
-        name:
-            "Member Four",
-
-        nationality:
-            "HN-DN MEMBER",
-
-        attribute:
-            "Precision",
-
-        bio:
-            "Metal represents clarity, discipline, structure, and determination. This member represents the sharpest edge of HN-DN."
+    Sylvan: {
+        role: "PROTAGONIST — YGGDRASILL"
     },
 
-
-    water: {
-
-        element:
-            "WATER",
-
-        symbol:
-            "水",
-
-        name:
-            "Member Five",
-
-        nationality:
-            "HN-DN MEMBER",
-
-        attribute:
-            "Adaptation",
-
-        bio:
-            "Water represents movement, intuition, adaptability, and depth. This member embodies change without losing identity."
+    Riya: {
+        role: "PROTAGONIST — TMI"
     },
 
-
-    /*
-     * VINCENT OSTULANES
-     *
-     * Wuxing has five traditional elements.
-     * Vincent therefore exists outside the five
-     * rather than being given an invented element.
-     */
-
-    vincent: {
-
-        element:
-            "THE SIXTH",
-
-        symbol:
-            "六",
-
-        name:
-            "Vincent Ostulanes",
-
-        nationality:
-            "FILIPINO",
-
-        attribute:
-            "Beyond Wuxing",
-
-        bio:
-            "Vincent Ostulanes is the sixth member of HN-DN. As a Filipino member positioned outside the traditional five Wuxing forces, he represents the element that cannot be classified — an identity that exists beyond the established system."
+    Vincent: {
+        role: "HN-DN MEMBER — PERILOUS DINER"
     }
 
 };
 
 
-/* =========================================
+/* =========================
    MEMBER MODAL
-   ========================================= */
+========================= */
 
-const memberModal =
-    document.getElementById(
-        "memberModal"
-    );
+function openMember(name) {
 
-const closeMemberModal =
-    document.getElementById(
-        "closeMemberModal"
-    );
+    const member = members[name];
 
-const memberModalSymbol =
-    document.getElementById(
-        "memberModalSymbol"
-    );
+    document.getElementById("modal-type").textContent =
+        "MEMBER FILE";
 
-const memberModalElement =
-    document.getElementById(
-        "memberModalElement"
-    );
+    document.getElementById("modal-title").textContent =
+        name.toUpperCase();
 
-const memberModalName =
-    document.getElementById(
-        "memberModalName"
-    );
+    document.getElementById("modal-content").textContent =
+        `${member.role}
 
-const memberModalNationality =
-    document.getElementById(
-        "memberModalNationality"
-    );
+[ MEMBER INFORMATION PLACEHOLDER ]
 
-const memberModalBio =
-    document.getElementById(
-        "memberModalBio"
-    );
+Biography, personality, lore connections, appearances,
+and other information can be added here.`;
 
-const memberModalAttribute =
-    document.getElementById(
-        "memberModalAttribute"
-    );
-
-
-document
-    .querySelectorAll(".member")
-    .forEach(member => {
-
-        member.addEventListener("click", () => {
-
-            const memberID =
-                member.dataset.member;
-
-            const data =
-                members[memberID];
-
-            if (!data) return;
-
-
-            memberModalSymbol.textContent =
-                data.symbol;
-
-            memberModalElement.textContent =
-                data.element;
-
-            memberModalName.textContent =
-                data.name;
-
-            memberModalNationality.textContent =
-                data.nationality;
-
-            memberModalBio.textContent =
-                data.bio;
-
-            memberModalAttribute.textContent =
-                data.attribute;
-
-
-            memberModal.classList.add(
-                "open"
-            );
-
-            memberModal.setAttribute(
-                "aria-hidden",
-                "false"
-            );
-
-        });
-
-    });
-
-
-closeMemberModal.addEventListener(
-    "click",
-    closeMemberInfo
-);
-
-
-function closeMemberInfo() {
-
-    memberModal.classList.remove(
-        "open"
-    );
-
-    memberModal.setAttribute(
-        "aria-hidden",
-        "true"
-    );
+    document.getElementById("modal").classList.add("active");
 
 }
 
 
-/* =========================================
-   BACKDROP CLICK
-   ========================================= */
+/* =========================
+   CLOSE MODAL
+========================= */
 
-albumModal.addEventListener(
-    "click",
-    event => {
+function closeModal() {
 
-        if (
-            event.target === albumModal
-        ) {
+    document
+        .getElementById("modal")
+        .classList.remove("active");
 
-            closeAlbumModal();
+}
 
-        }
 
+/* =========================
+   LISTEN
+========================= */
+
+function listenAlbum(album) {
+
+    /*
+        Replace this later with:
+
+        audio.src = "audio/" + album + ".mp3";
+        audio.play();
+
+        We keep it as a placeholder for now.
+    */
+
+    document.getElementById("modal-type").textContent =
+        "AUDIO PLAYER";
+
+    document.getElementById("modal-title").textContent =
+        album.toUpperCase();
+
+    document.getElementById("modal-content").textContent =
+        `NOW SELECTED:
+
+${album}
+
+[ AUDIO PLAYER WILL GO HERE ]
+
+You can later add:
+• album artwork
+• tracklist
+• progress bar
+• play/pause
+• volume
+• individual tracks`;
+
+    document.getElementById("modal").classList.add("active");
+
+}
+
+
+/* =========================
+   CLOSE WITH ESC
+========================= */
+
+document.addEventListener("keydown", (event) => {
+
+    if (event.key === "Escape") {
+        closeModal();
     }
-);
-
-
-memberModal.addEventListener(
-    "click",
-    event => {
-
-        if (
-            event.target === memberModal
-        ) {
-
-            closeMemberInfo();
-
-        }
-
-    }
-);
-
-
-/* =========================================
-   ESCAPE KEY
-   ========================================= */
-
-document.addEventListener(
-    "keydown",
-    event => {
-
-        if (
-            event.key === "Escape"
-        ) {
-
-            closeAlbumModal();
-
-            closeMemberInfo();
-
-            mobileMenu.classList.remove(
-                "open"
-            );
-
-            menuButton.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-        }
-
-    }
-);
-
-
-/* =========================================
-   PRE-SAVE
-   ========================================= */
-
-const unlockButton =
-    document.getElementById(
-        "unlockButton"
-    );
-
-const teaser =
-    document.getElementById(
-        "teaser"
-    );
-
-
-let unlocked =
-    false;
-
-
-unlockButton.addEventListener(
-    "click",
-    () => {
-
-        if (unlocked) return;
-
-        unlocked = true;
-
-
-        teaser.classList.add(
-            "unlocked"
-        );
-
-
-        const buttonText =
-            unlockButton.querySelector(
-                "span:first-child"
-            );
-
-        const buttonIcon =
-            unlockButton.querySelector(
-                "span:last-child"
-            );
-
-
-        buttonText.textContent =
-            "TEASER UNLOCKED";
-
-        buttonIcon.textContent =
-            "✓";
-
-
-        unlockButton.style.pointerEvents =
-            "none";
-
-    }
-);
-
-
-/* =========================================
-   SCROLL REVEAL
-   ========================================= */
-
-const revealElements =
-    document.querySelectorAll(
-        ".section, .intro"
-    );
-
-
-const observer =
-    new IntersectionObserver(
-        entries => {
-
-            entries.forEach(entry => {
-
-                if (
-                    entry.isIntersecting
-                ) {
-
-                    entry.target.style.opacity =
-                        "1";
-
-                    entry.target.style.transform =
-                        "translateY(0)";
-
-                }
-
-            });
-
-        },
-        {
-            threshold:
-                0.08
-        }
-    );
-
-
-revealElements.forEach(element => {
-
-    element.style.opacity =
-        "0";
-
-    element.style.transform =
-        "translateY(30px)";
-
-    element.style.transition =
-        "opacity .8s ease, transform .8s ease";
-
-    observer.observe(
-        element
-    );
 
 });
+
+
+/* =========================
+   CLOSE WHEN CLICKING OUTSIDE
+========================= */
+
+document
+    .getElementById("modal")
+    .addEventListener("click", (event) => {
+
+        if (event.target.id === "modal") {
+            closeModal();
+        }
+
+    });
