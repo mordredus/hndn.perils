@@ -3,30 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>HN-DN — Story Archive</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- =========================
-         LOADING SCREEN
-    ========================== -->
-
-    <div id="loading-screen">
+    <div id="loading">
         <div class="loading-logo">HN-DN</div>
         <div class="loading-text">INSERT COIN</div>
     </div>
 
-
-    <!-- =========================
-         HEADER
-    ========================== -->
-
     <header>
-
         <div class="logo">
             HN-DN
             <span>STORY ARCHIVE</span>
@@ -34,454 +22,209 @@
 
         <nav>
             <a href="#stories">STORIES</a>
-            <a href="#side-stories">SIDE STORY</a>
+            <a href="#side-story">SIDE STORY</a>
             <a href="#members">MEMBERS</a>
         </nav>
-
     </header>
 
-
-    <!-- =========================
-         HERO
-    ========================== -->
 
     <main>
 
         <section class="hero">
-
-            <div class="neon-sign">
-                <span>WELCOME TO</span>
+            <div class="diner-sign">
+                <small>WELCOME TO</small>
                 <h1>HN-DN</h1>
-                <span>STORY ARCHIVE</span>
+                <small>STORY ARCHIVE</small>
             </div>
 
-            <p class="hero-description">
+            <p class="hero-subtitle">
                 SIX MEMBERS.<br>
-                SIX PERSPECTIVES.<br>
-                ONE STORY.
+                SIX STORIES.<br>
+                ONE UNIVERSE.
             </p>
 
-            <div class="scroll-indicator">
-                ↓ SCROLL TO ENTER ↓
-            </div>
-
+            <div class="scroll">↓ SCROLL TO ENTER ↓</div>
         </section>
 
-
-        <!-- =========================
-             STORIES
-        ========================== -->
 
         <section id="stories" class="section">
 
-            <div class="section-heading">
+            <div class="section-header">
                 <span>01</span>
                 <h2>MAIN STORIES</h2>
-                <span>— THE MENU —</span>
+                <span>THE MENU</span>
             </div>
 
+            <div class="album-grid">
 
-            <div class="story-grid">
-
-
-                <!-- DREAMWEAVER -->
-
-                <article
-                    class="story-card dreamweaver"
-                    data-story="dreamweaver"
-                    data-title="DREAMWEAVER"
-                    data-character="EZRA"
-                >
-
-                    <div class="card-number">01</div>
-
-                    <div class="card-content">
-
-                        <span class="story-type">
-                            ALBUM / STORY
-                        </span>
-
+                <article class="album dreamweaver"
+                         data-story="dreamweaver">
+                    <span class="album-number">01</span>
+                    <div class="album-info">
+                        <span class="album-type">ALBUM / STORY</span>
                         <h3>DREAMWEAVER</h3>
-
-                        <p class="protagonist">
-                            EZRA
-                        </p>
-
-                        <div class="card-buttons">
-
-                            <button
-                                onclick="openStory('dreamweaver')"
-                            >
-                                READ STORY
-                            </button>
-
-                            <button
-                                onclick="listenAlbum('Dreamweaver')"
-                            >
-                                LISTEN
-                            </button>
-
-                        </div>
-
+                        <p>EZRA</p>
                     </div>
-
                 </article>
 
 
-                <!-- SCHMETTERLING -->
-
-                <article
-                    class="story-card schmetterling"
-                    data-story="schmetterling"
-                >
-
-                    <div class="card-number">02</div>
-
-                    <div class="card-content">
-
-                        <span class="story-type">
-                            ALBUM / STORY
-                        </span>
-
+                <article class="album schmetterling"
+                         data-story="schmetterling">
+                    <span class="album-number">02</span>
+                    <div class="album-info">
+                        <span class="album-type">ALBUM / STORY</span>
                         <h3>SCHMETTERLING</h3>
-
-                        <p class="protagonist">
-                            DANIEL
-                        </p>
-
-                        <div class="card-buttons">
-
-                            <button
-                                onclick="openStory('schmetterling')"
-                            >
-                                READ STORY
-                            </button>
-
-                            <button
-                                onclick="listenAlbum('Schmetterling')"
-                            >
-                                LISTEN
-                            </button>
-
-                        </div>
-
+                        <p>DANIEL</p>
                     </div>
-
                 </article>
 
 
-                <!-- REBIS -->
-
-                <article
-                    class="story-card rebis"
-                    data-story="rebis"
-                >
-
-                    <div class="card-number">03</div>
-
-                    <div class="card-content">
-
-                        <span class="story-type">
-                            ALBUM / STORY
-                        </span>
-
+                <article class="album rebis"
+                         data-story="rebis">
+                    <span class="album-number">03</span>
+                    <div class="album-info">
+                        <span class="album-type">ALBUM / STORY</span>
                         <h3>REBIS</h3>
-
-                        <p class="protagonist">
-                            SALLY
-                        </p>
-
-                        <div class="card-buttons">
-
-                            <button
-                                onclick="openStory('rebis')"
-                            >
-                                READ STORY
-                            </button>
-
-                            <button
-                                onclick="listenAlbum('Rebis')"
-                            >
-                                LISTEN
-                            </button>
-
-                        </div>
-
+                        <p>SALLY</p>
                     </div>
-
                 </article>
 
 
-                <!-- YGGDRASILL -->
-
-                <article
-                    class="story-card yggdrasill"
-                    data-story="yggdrasill"
-                >
-
-                    <div class="card-number">04</div>
-
-                    <div class="card-content">
-
-                        <span class="story-type">
-                            ALBUM / STORY
-                        </span>
-
+                <article class="album yggdrasill"
+                         data-story="yggdrasill">
+                    <span class="album-number">04</span>
+                    <div class="album-info">
+                        <span class="album-type">ALBUM / STORY</span>
                         <h3>YGGDRASILL</h3>
-
-                        <p class="protagonist">
-                            SYLVAN
-                        </p>
-
-                        <div class="card-buttons">
-
-                            <button
-                                onclick="openStory('yggdrasill')"
-                            >
-                                READ STORY
-                            </button>
-
-                            <button
-                                onclick="listenAlbum('Yggdrasill')"
-                            >
-                                LISTEN
-                            </button>
-
-                        </div>
-
+                        <p>SYLVAN</p>
                     </div>
-
                 </article>
 
 
-                <!-- TMI -->
-
-                <article
-                    class="story-card tmi locked"
-                >
-
-                    <div class="lock-overlay">
-
-                        <div class="lock-symbol">
-                            ███
-                        </div>
-
-                        <span>
-                            ACCESS RESTRICTED
-                        </span>
-
-                    </div>
-
-                    <div class="card-number">05</div>
-
-                    <div class="card-content">
-
-                        <span class="story-type">
-                            ALBUM / STORY
-                        </span>
-
+                <article class="album tmi locked">
+                    <span class="album-number">05</span>
+                    <div class="album-info">
+                        <span class="album-type">ALBUM / STORY</span>
                         <h3>TMI</h3>
-
-                        <p class="protagonist">
-                            RIYA
-                        </p>
-
-                        <div class="upcoming">
-                            UPCOMING
-                        </div>
-
+                        <p>RIYA</p>
                     </div>
 
+                    <div class="lock">
+                        <strong>UPCOMING</strong>
+                        <span>ACCESS RESTRICTED</span>
+                    </div>
                 </article>
 
             </div>
-
         </section>
 
 
-        <!-- =========================
-             SIDE STORY
-        ========================== -->
+        <section id="side-story" class="section side-story">
 
-        <section id="side-stories" class="section side-section">
-
-            <div class="section-heading">
-
+            <div class="section-header">
                 <span>02</span>
-
                 <h2>SIDE STORY</h2>
-
-                <span>— CHEF'S SPECIAL —</span>
-
+                <span>CHEF'S SPECIAL</span>
             </div>
 
+            <article class="diner-card" data-story="diner">
 
-            <article
-                class="diner-card"
-                onclick="openStory('diner')"
-            >
-
-                <div class="diner-sign">
-
+                <div class="diner-title">
                     <span>HN-DN PRESENTS</span>
-
                     <h3>PERILOUS<br>DINER</h3>
-
-                    <small>
-                        A SIDE STORY
-                    </small>
-
+                    <span>A SIDE STORY</span>
                 </div>
 
-
-                <div class="diner-info">
-
-                    <span>PROTAGONIST</span>
-
-                    <strong>VINCENT</strong>
+                <div class="diner-details">
+                    <small>PROTAGONIST</small>
+                    <h4>VINCENT</h4>
 
                     <p>
                         Some stories aren't meant to be ordered.
                     </p>
 
-                    <button>
-                        ENTER DINER →
-                    </button>
-
+                    <button>ENTER DINER →</button>
                 </div>
 
             </article>
-
         </section>
 
 
-        <!-- =========================
-             MEMBERS
-        ========================== -->
+        <section id="members" class="section">
 
-        <section id="members" class="section members-section">
-
-            <div class="section-heading">
-
+            <div class="section-header">
                 <span>03</span>
-
                 <h2>THE MEMBERS</h2>
-
-                <span>— STAFF DIRECTORY —</span>
-
+                <span>STAFF DIRECTORY</span>
             </div>
 
+            <div class="members">
 
-            <div class="members-grid">
-
-                <div class="member" onclick="openMember('Ezra')">
+                <div class="member" data-member="Ezra">
                     <span>01</span>
                     <h3>EZRA</h3>
                     <small>DREAMWEAVER</small>
                 </div>
 
-                <div class="member" onclick="openMember('Daniel')">
+                <div class="member" data-member="Daniel">
                     <span>02</span>
                     <h3>DANIEL</h3>
                     <small>SCHMETTERLING</small>
                 </div>
 
-                <div class="member" onclick="openMember('Sally')">
+                <div class="member" data-member="Sally">
                     <span>03</span>
                     <h3>SALLY</h3>
                     <small>REBIS</small>
                 </div>
 
-                <div class="member" onclick="openMember('Sylvan')">
+                <div class="member" data-member="Sylvan">
                     <span>04</span>
                     <h3>SYLVAN</h3>
                     <small>YGGDRASILL</small>
                 </div>
 
-                <div class="member" onclick="openMember('Riya')">
+                <div class="member" data-member="Riya">
                     <span>05</span>
                     <h3>RIYA</h3>
                     <small>TMI</small>
                 </div>
 
-                <div class="member" onclick="openMember('Vincent')">
+                <div class="member" data-member="Vincent">
                     <span>06</span>
                     <h3>VINCENT</h3>
                     <small>HN-DN</small>
                 </div>
 
             </div>
-
         </section>
 
     </main>
 
 
-    <!-- =========================
-         MODAL
-    ========================== -->
-
-    <div id="modal" class="modal">
-
+    <div id="modal">
         <div class="modal-box">
 
-            <button
-                class="close-modal"
-                onclick="closeModal()"
-            >
-                ×
-            </button>
+            <button id="close-modal">×</button>
 
-            <span id="modal-type">
-                STORY
-            </span>
-
-            <h2 id="modal-title">
-                HN-DN
-            </h2>
-
-            <p id="modal-content">
-                Loading...
-            </p>
-
-            <button
-                class="modal-action"
-                onclick="closeModal()"
-            >
-                CLOSE
-            </button>
+            <span id="modal-type"></span>
+            <h2 id="modal-title"></h2>
+            <div id="modal-content"></div>
 
         </div>
-
     </div>
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
     <footer>
-
-        <div class="footer-logo">
-            HN-DN
-        </div>
-
-        <p>
-            OPEN 24 HOURS.
-        </p>
-
-        <p class="footer-warning">
+        <div>HN-DN</div>
+        <p>OPEN 24 HOURS.</p>
+        <p class="warning">
             SOME STORIES ARE BETTER LEFT UNREAD.
         </p>
-
-        <small>
-            © HN-DN STORY ARCHIVE
-        </small>
-
+        <small>© HN-DN STORY ARCHIVE</small>
     </footer>
 
 
     <script src="script.js"></script>
-
 </body>
 </html>
