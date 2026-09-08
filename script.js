@@ -1,14 +1,15 @@
-/* =========================
-   STORY DATABASE
-========================= */
+/* =========================================================
+   HN-DN STORY DATABASE
+========================================================= */
 
 const stories = {
 
     dreamweaver: {
+        type: "ALBUM / STORY — EZRA",
         title: "DREAMWEAVER",
-        type: "STORY / EZRA",
-        content:
-`EZRA
+
+        content: `
+EZRA
 
 The first story.
 
@@ -16,14 +17,21 @@ The dream begins here.
 
 [ STORY CONTENT PLACEHOLDER ]
 
-This section can eventually contain the complete Dreamweaver narrative, divided into chapters.`
+The complete narrative can eventually be divided
+into chapters, scenes, documents, and lore entries.
+
+LISTEN TO ALBUM
+
+[ AUDIO PLAYER PLACEHOLDER ]
+        `
     },
 
     schmetterling: {
+        type: "ALBUM / STORY — DANIEL",
         title: "SCHMETTERLING",
-        type: "STORY / DANIEL",
-        content:
-`DANIEL
+
+        content: `
+DANIEL
 
 A different perspective.
 
@@ -31,14 +39,21 @@ A different story.
 
 [ STORY CONTENT PLACEHOLDER ]
 
-The Schmetterling narrative will eventually be loaded here.`
+The Schmetterling narrative will eventually
+contain its complete story and lore.
+
+LISTEN TO ALBUM
+
+[ AUDIO PLAYER PLACEHOLDER ]
+        `
     },
 
     rebis: {
+        type: "ALBUM / STORY — SALLY",
         title: "REBIS",
-        type: "STORY / SALLY",
-        content:
-`SALLY
+
+        content: `
+SALLY
 
 Two halves.
 
@@ -46,27 +61,41 @@ One identity.
 
 [ STORY CONTENT PLACEHOLDER ]
 
-The Rebis narrative will eventually be loaded here.`
+The Rebis narrative will eventually
+contain its complete story and lore.
+
+LISTEN TO ALBUM
+
+[ AUDIO PLAYER PLACEHOLDER ]
+        `
     },
 
     yggdrasill: {
+        type: "ALBUM / STORY — SYLVAN",
         title: "YGGDRASILL",
-        type: "STORY / SYLVAN",
-        content:
-`SYLVAN
+
+        content: `
+SYLVAN
 
 The tree remembers.
 
 [ STORY CONTENT PLACEHOLDER ]
 
-The Yggdrasill narrative will eventually be loaded here.`
+The Yggdrasill narrative will eventually
+contain its complete story and lore.
+
+LISTEN TO ALBUM
+
+[ AUDIO PLAYER PLACEHOLDER ]
+        `
     },
 
     diner: {
+        type: "SIDE STORY — VINCENT",
         title: "PERILOUS DINER",
-        type: "SIDE STORY / VINCENT",
-        content:
-`VINCENT
+
+        content: `
+VINCENT
 
 WELCOME TO THE DINER.
 
@@ -76,15 +105,59 @@ Your order has already been placed.
 
 [ STORY CONTENT PLACEHOLDER ]
 
-Side stories may reveal things that the main stories never mention.`
+A side story outside the primary album sequence,
+but still part of the HN-DN universe.
+
+LISTEN TO SIDE STORY
+
+[ AUDIO PLAYER PLACEHOLDER ]
+        `
     }
 
 };
 
 
-/* =========================
+/* =========================================================
+   MEMBER DATABASE
+========================================================= */
+
+const members = {
+
+    Ezra:
+        "PROTAGONIST — DREAMWEAVER",
+
+    Daniel:
+        "PROTAGONIST — SCHMETTERLING",
+
+    Sally:
+        "PROTAGONIST — REBIS",
+
+    Sylvan:
+        "PROTAGONIST — YGGDRASILL",
+
+    Riya:
+        "PROTAGONIST — TMI",
+
+    Vincent:
+        "HN-DN MEMBER — SINCE DEBUT"
+
+};
+
+
+/* =========================================================
+   ELEMENTS
+========================================================= */
+
+const modal = document.getElementById("modal");
+const modalType = document.getElementById("modal-type");
+const modalTitle = document.getElementById("modal-title");
+const modalContent = document.getElementById("modal-content");
+const closeButton = document.getElementById("close-modal");
+
+
+/* =========================================================
    OPEN STORY
-========================= */
+========================================================= */
 
 function openStory(id) {
 
@@ -92,157 +165,104 @@ function openStory(id) {
 
     if (!story) return;
 
-    document.getElementById("modal-type").textContent =
-        story.type;
+    modalType.textContent = story.type;
+    modalTitle.textContent = story.title;
+    modalContent.textContent = story.content;
 
-    document.getElementById("modal-title").textContent =
-        story.title;
-
-    document.getElementById("modal-content").textContent =
-        story.content;
-
-    document.getElementById("modal").classList.add("active");
-
+    modal.classList.add("active");
 }
 
 
-/* =========================
-   MEMBER DATABASE
-========================= */
-
-const members = {
-
-    Ezra: {
-        role: "PROTAGONIST — DREAMWEAVER"
-    },
-
-    Daniel: {
-        role: "PROTAGONIST — SCHMETTERLING"
-    },
-
-    Sally: {
-        role: "PROTAGONIST — REBIS"
-    },
-
-    Sylvan: {
-        role: "PROTAGONIST — YGGDRASILL"
-    },
-
-    Riya: {
-        role: "PROTAGONIST — TMI"
-    },
-
-    Vincent: {
-        role: "HN-DN MEMBER — PERILOUS DINER"
-    }
-
-};
-
-
-/* =========================
-   MEMBER MODAL
-========================= */
+/* =========================================================
+   OPEN MEMBER
+========================================================= */
 
 function openMember(name) {
 
-    const member = members[name];
+    modalType.textContent = "MEMBER FILE";
+    modalTitle.textContent = name.toUpperCase();
 
-    document.getElementById("modal-type").textContent =
-        "MEMBER FILE";
+    modalContent.textContent = `
+${members[name]}
 
-    document.getElementById("modal-title").textContent =
-        name.toUpperCase();
+[ MEMBER INFORMATION ]
 
-    document.getElementById("modal-content").textContent =
-        `${member.role}
+Biography, personality, relationships,
+story appearances, and lore connections
+can be added here.
 
-[ MEMBER INFORMATION PLACEHOLDER ]
+HN-DN MEMBER SINCE DEBUT.
+    `;
 
-Biography, personality, lore connections, appearances,
-and other information can be added here.`;
-
-    document.getElementById("modal").classList.add("active");
-
+    modal.classList.add("active");
 }
 
 
-/* =========================
+/* =========================================================
    CLOSE MODAL
-========================= */
+========================================================= */
 
 function closeModal() {
-
-    document
-        .getElementById("modal")
-        .classList.remove("active");
-
+    modal.classList.remove("active");
 }
 
 
-/* =========================
-   LISTEN
-========================= */
+/* =========================================================
+   ALBUM CLICK EVENTS
+========================================================= */
 
-function listenAlbum(album) {
+document.querySelectorAll(".album[data-story]")
+    .forEach(album => {
 
-    /*
-        Replace this later with:
+        album.addEventListener("click", () => {
+            openStory(album.dataset.story);
+        });
 
-        audio.src = "audio/" + album + ".mp3";
-        audio.play();
-
-        We keep it as a placeholder for now.
-    */
-
-    document.getElementById("modal-type").textContent =
-        "AUDIO PLAYER";
-
-    document.getElementById("modal-title").textContent =
-        album.toUpperCase();
-
-    document.getElementById("modal-content").textContent =
-        `NOW SELECTED:
-
-${album}
-
-[ AUDIO PLAYER WILL GO HERE ]
-
-You can later add:
-• album artwork
-• tracklist
-• progress bar
-• play/pause
-• volume
-• individual tracks`;
-
-    document.getElementById("modal").classList.add("active");
-
-}
+    });
 
 
-/* =========================
-   CLOSE WITH ESC
-========================= */
+/* =========================================================
+   SIDE STORY
+========================================================= */
 
-document.addEventListener("keydown", (event) => {
+document.querySelector(".diner-card")
+    .addEventListener("click", () => {
+        openStory("diner");
+    });
+
+
+/* =========================================================
+   MEMBER EVENTS
+========================================================= */
+
+document.querySelectorAll(".member")
+    .forEach(member => {
+
+        member.addEventListener("click", () => {
+            openMember(member.dataset.member);
+        });
+
+    });
+
+
+/* =========================================================
+   CLOSE EVENTS
+========================================================= */
+
+closeButton.addEventListener("click", closeModal);
+
+modal.addEventListener("click", event => {
+
+    if (event.target === modal) {
+        closeModal();
+    }
+
+});
+
+document.addEventListener("keydown", event => {
 
     if (event.key === "Escape") {
         closeModal();
     }
 
 });
-
-
-/* =========================
-   CLOSE WHEN CLICKING OUTSIDE
-========================= */
-
-document
-    .getElementById("modal")
-    .addEventListener("click", (event) => {
-
-        if (event.target.id === "modal") {
-            closeModal();
-        }
-
-    });
